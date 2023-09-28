@@ -62,8 +62,6 @@
                     hideDuration: 200,
                     positionClass: "toast-top-center",
                 };
-                toastr.success('Welcome Roxana Roussell.');
-
                 $('.theme-switcher').removeClass('open');
             }, 500);
 

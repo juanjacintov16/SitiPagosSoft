@@ -319,12 +319,12 @@
 <!-- end::main -->
 
 <!-- Plugin scripts -->
-<script src="vendors/bundle.js"></script>
+<script src="<?=$webroot;?>vendors/bundle.js"></script>
 
 <!-- Prism -->
 <script src="<?=$webroot;?>vendors/prism/prism.js"></script>
 
 <!-- App scripts -->
-<script src="<?=$webroot;?>js/app.min.js"></script>
+<script src="<?=$webroot;?>js/app.js"></script>
 </body>
 </html>
