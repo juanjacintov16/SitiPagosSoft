@@ -1,5 +1,5 @@
-<div class="users index content">
-<h4><?= __('Users') ?></h4>
+<div class="accountTypes index content">
+<h4><?= __('Account Types') ?></h4>
     <div class="pull-right">
         <?= $this->Html->link(__('<i class="ti-plus mr-2"></i> Registrar'), ['action' => 'add'], ['class' => 'btn btn-success waves-effect width-md waves-light','escape'=>false ]) ?>
     </div>
@@ -9,27 +9,19 @@
             <thead>
                 <tr>
                     <th><?= ucwords('id') ?></th>
-                    <th><?= ucwords('name') ?></th>
-                    <th><?= ucwords('last name') ?></th>
-                    <th><?= ucwords('email') ?></th>
-                    <th><?= ucwords('created') ?></th>
-                    <th><?= ucwords('modified') ?></th>
+                    <th><?= ucwords('type') ?></th>
                     <th class="actions"><?= __('Acciones') ?></th>
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($users as $user): ?>
+                <?php foreach ($accountTypes as $accountType): ?>
                 <tr>
-                    <td><?= $this->Number->format($user->id) ?></td>
-                    <td><?= h($user->name) ?></td>
-                    <td><?= h($user->last_name) ?></td>
-                    <td><?= h($user->email) ?></td>
-                    <td><?= h($user->created) ?></td>
-                    <td><?= h($user->modified) ?></td>
+                    <td><?= $this->Number->format($accountType->id) ?></td>
+                    <td><?= h($accountType->type) ?></td>
                     <td class="actions">
-                        <?= $this->Html->link(__('<i class="ti-eye mr-2"></i> Detalle'), ['action' => 'view', $user->id],['escape'=>false,'class'=>'btn btn-info'] ) ?>
-                        <?= $this->Html->link(__('<i class="ti-pencil mr-2"></i> Editar'), ['action' => 'edit', $user->id],['escape'=>false,'class'=>'btn btn-warning'] ) ?>
-                        <?= $this->Form->postLink(__('<i class="ti-trash mr-2"></i> Eliminar'), ['action' => 'delete', $user->id], ['escape'=>false,'class'=>'btn btn-danger','confirm' => __('Estas seguro de eliminar el registro # {0}?', $user->id)] ,['class'=>'btn btn-danger'] ) ?>
+                        <?= $this->Html->link(__('<i class="ti-eye mr-2"></i> Detalle'), ['action' => 'view', $accountType->id],['escape'=>false,'class'=>'btn btn-info'] ) ?>
+                        <?= $this->Html->link(__('<i class="ti-pencil mr-2"></i> Editar'), ['action' => 'edit', $accountType->id],['escape'=>false,'class'=>'btn btn-warning'] ) ?>
+                        <?= $this->Form->postLink(__('<i class="ti-trash mr-2"></i> Eliminar'), ['action' => 'delete', $accountType->id], ['escape'=>false,'class'=>'btn btn-danger','confirm' => __('Estas seguro de eliminar el registro # {0}?', $accountType->id)] ,['class'=>'btn btn-danger'] ) ?>
                     </td>
                 </tr>
                 <?php endforeach; ?>

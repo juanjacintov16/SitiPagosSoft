@@ -1,9 +1,3 @@
-<?php
-/**
- * @var \App\View\AppView $this
- * @var \App\Model\Entity\User $user
- */
-?>
 <div class="form-row">
     <div class="col-md-6 mb-3">
         <div class="users form content">
@@ -12,9 +6,13 @@
                 <h5>Registrar</h5>
                 <br>
                 <?php
+                    echo $this->Form->control('name',['required'=>true,'class'=>'form-control'] );
+                    echo $this->Form->control('last_name',['required'=>true,'class'=>'form-control'] );
                     echo $this->Form->control('username',['required'=>true,'class'=>'form-control'] );
                     echo $this->Form->control('email',['required'=>true,'class'=>'form-control'] );
                     echo $this->Form->control('password',['required'=>true,'class'=>'form-control'] );
+                    echo $this->Form->control('profile_id',['required'=>true,'class'=>'form-control','type'=>'select','options'=>$userProfiles ,'empty'=>'Seleccione una Opción' ] );
+                    echo $this->Form->control('state_id',['required'=>true,'class'=>'form-control','type'=>'select','options'=>$userStates ,'empty'=>'Seleccione una Opción'] );
                 ?>
             </fieldset>
             <br>
@@ -29,3 +27,5 @@
         </div>
     </div>
 </div>
+
+

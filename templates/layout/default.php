@@ -18,11 +18,7 @@
     <!-- App styles -->
     <link rel="stylesheet" href="<?=$webroot;?>css/app.min.css" type="text/css">
 
-    <style>
-        .btn-primary, .btn-info , .btn-danger , .btn-warning , .btn-success { 
-            color : white !important;
-        }
-    </style>
+
 </head>
 <body>
 
@@ -59,13 +55,13 @@
             <li class="nav-item dropdown">
                 <a href="#" class="nav-link" data-toggle="dropdown" aria-expanded="false">
                         <figure class="avatar avatar-sm">
-                            <img src="https://via.placeholder.com/128X128" class="rounded-circle" alt="avatar">
+                            <img src="<?=$webroot;?>img/128X128.png" class="rounded-circle" alt="avatar">
                         </figure>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-big">
-                        <div class="p-3 text-center" data-backround-image="https://via.placeholder.com/1000X563">
+                        <div class="p-3 text-center" data-backround-image="<?=$webroot;?>/img/1000X563.png">
                             <figure class="avatar mb-3">
-                                <img src="https://via.placeholder.com/128X128" class="rounded-circle" alt="image">
+                                <img src="<?=$webroot;?>img/128X128.png" class="rounded-circle" alt="image">
                             </figure>
                         </div>
                         <div class="dropdown-menu-body">
@@ -136,7 +132,7 @@
                                 <a href="#" class="list-group-item d-flex align-items-center">
                                     <div>
                                         <div class="avatar avatar-sm m-r-10">
-                                            <img src="https://via.placeholder.com/128X128" class="rounded-circle" alt="image">
+                                            <img src="<?=$webroot;?>img/128X128.png" class="rounded-circle" alt="image">
                                         </div>
                                     </div>
                                     <span>Valentine Maton</span>
@@ -144,7 +140,7 @@
                                 <a href="#" class="list-group-item d-flex align-items-center">
                                     <div>
                                         <div class="avatar avatar-sm m-r-10">
-                                            <img src="https://via.placeholder.com/128X128" class="rounded-circle" alt="image">
+                                            <img src="<?=$webroot;?>img/128X128.png" class="rounded-circle" alt="image">
                                         </div>
                                     </div>
                                     <span>Holmes Cherryman</span>
@@ -152,7 +148,7 @@
                                 <a href="#" class="list-group-item d-flex align-items-center">
                                     <div>
                                         <div class="avatar avatar-sm m-r-10">
-                                            <img src="https://via.placeholder.com/128X128" class="rounded-circle" alt="image">
+                                            <img src="<?=$webroot;?>img/128X128.png" class="rounded-circle" alt="image">
                                         </div>
                                     </div>
                                     <span>Kenneth Hune</span>
@@ -166,10 +162,10 @@
                                     <span class="avatar-title bg-success rounded-circle">E</span>
                                 </a>
                                 <a href="#" class="avatar">
-                                    <img src="https://via.placeholder.com/128X128" class="rounded-circle" alt="avatar">
+                                    <img src="<?=$webroot;?>img/128X128.png" class="rounded-circle" alt="avatar">
                                 </a>
                                 <a href="#" class="avatar">
-                                    <img src="https://via.placeholder.com/128X128" class="rounded-circle" alt="avatar">
+                                    <img src="<?=$webroot;?>img/128X128.png" class="rounded-circle" alt="avatar">
                                 </a>
                                 <a href="#" class="avatar">
                                     <span class="avatar-title bg-info rounded-circle">C</span>
@@ -215,26 +211,25 @@
                 </div>
                 <div class="open" id="elements">
                     <ul>
-                        <li class="navigation-divider">Portal</li>
+                        <li class="navigation-divider"> <b>Portal</b> </li>
                         <li>
-                            <?= $this->Html->link(__('<strong>Usuarios</strong>'), ['controller'=>'Users','action' => 'index'], ['class'=>'','escape'=>false] ) ?>
-                        </li>
-                        <li>
-                            <a href="#"><strong>Modulo Cuentas</strong></a>
+                            <a href="#" class="menu">Seguridad</a>
                             <ul>
                                 <li><?= $this->Html->link(__('Usuarios'), ['controller'=>'Users','action' => 'index'], ['class'=>'','escape'=>false] ) ?></li>
-                                <li><?= $this->Html->link(__('Usuarios'), ['controller'=>'Users','action' => 'index'], ['class'=>'','escape'=>false] ) ?></li>
-                                <li><?= $this->Html->link(__('Usuarios'), ['controller'=>'Users','action' => 'index'], ['class'=>'','escape'=>false] ) ?></li>
-                                <li><?= $this->Html->link(__('Usuarios'), ['controller'=>'Users','action' => 'index'], ['class'=>'','escape'=>false] ) ?></li>
+                                <li><?= $this->Html->link(__('Usuarios Perfiles'), ['controller'=>'UserProfiles','action' => 'index'], ['class'=>'','escape'=>false] ) ?></li>
+                                <li><?= $this->Html->link(__('Usuarios Estados'), ['controller'=>'UserStates','action' => 'index'], ['class'=>'','escape'=>false] ) ?></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="#"><strong>Modulo Pagos</strong></a>
+                            <a href="#" class="menu">Modulo Cuentas</a>
                             <ul>
-                                <li><?= $this->Html->link(__('Usuarios'), ['controller'=>'Users','action' => 'index'], ['class'=>'','escape'=>false] ) ?></li>
-                                <li><?= $this->Html->link(__('Usuarios'), ['controller'=>'Users','action' => 'index'], ['class'=>'','escape'=>false] ) ?></li>
-                                <li><?= $this->Html->link(__('Usuarios'), ['controller'=>'Users','action' => 'index'], ['class'=>'','escape'=>false] ) ?></li>
-                                <li><?= $this->Html->link(__('Usuarios'), ['controller'=>'Users','action' => 'index'], ['class'=>'','escape'=>false] ) ?></li>
+                                <li><?= $this->Html->link(__('Cuentas'), ['controller'=>'Accounts','action' => 'index'], ['class'=>'','escape'=>false] ) ?></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="menu">Modulo Pagos</a>
+                            <ul>
+                                
                             </ul>
                         </li>
                     </ul>

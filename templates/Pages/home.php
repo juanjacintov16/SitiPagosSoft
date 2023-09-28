@@ -1,8 +1,8 @@
-<h3>Dashboard</h3>
-<br><br>
+<h4>Dashboard</h4>
+<br><br><br><br>
 
 <center>
-    <img src="https://img.freepik.com/vector-premium/desarrollo-web-personas-diminutas-enorme-tableta-portatil-software-telefono-creando-procesos-adaptacion-aplicaciones-diferentes-medios-electronicos-disenadores-interfaz-usuario-programadores-concepto-vectorial_176411-4455.jpg" class="rounded" alt="image" width="50%">
+    <img src="https://www.questionpro.com/blog/wp-content/uploads/2021/08/Portada-software-para-investigacion.jpg" class="rounded" alt="image" width="50%">
 </center>
 
 <br><br><br><br><br><br>

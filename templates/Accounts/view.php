@@ -1,0 +1,35 @@
+<h5>Detalle</h5>
+
+<?= $this->Form->create($account,['class'=>'needs-validation','novalidate'=>'novalidate' ] ) ?>
+
+<div class="form-row">
+    <div class="col-md-6 mb-6"> <?php echo $this->Form->control('type_id', ['label'=>'Tipo','class'=>'form-control','options' => $accountTypes,'disabled'=>'disabled' ]);  ?> </div>
+    <div class="col-md-6 mb-6"> <?php echo $this->Form->control('beneficiary',['label'=>'Beneficiario','class'=>'form-control','disabled'=>'disabled'] );  ?> </div>
+    <div class="col-md-6 mb-6"> <?php echo $this->Form->control('account_number',['label'=>'Número Cuenta','class'=>'form-control','disabled'=>'disabled'] );  ?> </div>
+    <div class="col-md-6 mb-6"> <?php echo $this->Form->control('type_register',['label'=>'Tipo Registro','class'=>'form-control','disabled'=>'disabled'] );  ?> </div>
+    <div class="col-md-6 mb-6"> <?php echo $this->Form->control('badge',['label'=>'Divisa','class'=>'form-control','disabled'=>'disabled'] );  ?> </div>
+    <div class="col-md-6 mb-6"> <?php echo $this->Form->control('clabe',['label'=>'Clabe','class'=>'form-control','disabled'=>'disabled'] );  ?> </div>
+    <div class="col-md-6 mb-6"> <?php echo $this->Form->control('physical_person',['label'=>'Persona Fisica','class'=>'form-control','required'=>true,'options' => ['1'=>'Persona Fisica','2'=>'Persona Moral']] );  ?> </div>
+    <div class="col-md-6 mb-6"> <?php echo $this->Form->control('name',['label'=>'Nombre Persona','class'=>'form-control','disabled'=>'disabled'] );  ?> </div>
+    <div class="col-md-6 mb-6"> <?php echo $this->Form->control('last_name',['label'=>'Apellido Paterno','class'=>'form-control','disabled'=>'disabled'] );  ?> </div>
+    <div class="col-md-6 mb-6"> <?php echo $this->Form->control('mothers_last_name',['label'=>'Apellido Materno','class'=>'form-control','disabled'=>'disabled'] );  ?> </div>
+    <div class="col-md-6 mb-6"> <?php echo $this->Form->control('business_name',['label'=>'Razón Social','class'=>'form-control','disabled'=>'disabled'] );  ?> </div>
+    <div class="col-md-6 mb-6"> <?php echo $this->Form->control('rfc_curp',['label'=>'Curp/Rfc','class'=>'form-control','disabled'=>'disabled'] );  ?> </div>
+    <div class="col-md-6 mb-6"> <?php echo $this->Form->control('alias',['label'=>'Alas','class'=>'form-control','disabled'=>'disabled'] );  ?> </div>
+    <div class="col-md-6 mb-6"> <?php echo $this->Form->control('email_notification',['label'=>'Correo Notificación','class'=>'form-control','disabled'=>'disabled','type'=>'email'] );  ?> </div>
+    <div class="col-md-6 mb-6"> <?php echo $this->Form->control('relation',['label'=>'Relación','class'=>'form-control','disabled'=>'disabled'] );  ?> </div>
+    <div class="col-md-6 mb-6"> <?php echo $this->Form->control('type_relation',['label'=>'Tipo Relación','class'=>'form-control','disabled'=>'disabled'] );  ?> </div>
+    <div class="col-md-6 mb-6"> <?php echo $this->Form->control('limit_amount',['label'=>'Monto Limite Operación','class'=>'form-control','disabled'=>'disabled'] );  ?> </div>
+    <div class="col-md-6 mb-6"> <?php echo $this->Form->control('destination_account',['label'=>'Cuenta Destino','class'=>'form-control','disabled'=>'disabled'] );  ?> </div>
+    <div class="col-md-6 mb-6"> <?php echo $this->Form->control('verified',['label'=>'Verificado','class'=>'form-control','required'=>true ,'options' => ['1'=>'Verificado','2'=>'Sin Verificar']  ] );  ?> </div>
+    <div class="col-md-6 mb-6"> <?php echo $this->Form->control('state_id', ['label'=>'Estado','class'=>'form-control','options' => $accountStates,'empty'=>'Seleccione una Opción','disabled'=>'disabled' ]);  ?> </div>
+</div>
+
+<br><br>
+
+<div class="pull-right">
+    <?= $this->Html->link(__('<i class="ti-angle-left mr-2"></i> Regresar'), ['action' => 'index'], ['class' => 'btn btn-primary btn-uppercase','escape'=>false],['escape'=>false] ) ?>
+</div>
+        
+<?= $this->Form->end() ?>
+

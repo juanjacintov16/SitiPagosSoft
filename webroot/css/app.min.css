@@ -17217,3 +17217,11 @@ body.dark.small-navigation .navigation-menu-body ul li.navigation-divider:after 
 
 
 
+.btn-primary, .btn-info , .btn-danger , .btn-warning , .btn-success { 
+    color : white !important;
+}
+
+.menu{
+    color:#1565c0 !important;
+    /*font-weight: bold !important;*/
+}

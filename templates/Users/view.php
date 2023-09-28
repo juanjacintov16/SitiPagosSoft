@@ -6,8 +6,12 @@
                 <h5>Detalle</h5>
                 <br>
                 <?php
-                    echo $this->Form->control('username',['class'=>'form-control','disabled'=>'disabled'] );
-                    echo $this->Form->control('email',['class'=>'form-control','disabled'=>'disabled'] );
+                    echo $this->Form->control('name',['required'=>true,'class'=>'form-control','disabled'=>'disabled'] );
+                    echo $this->Form->control('last_name',['required'=>true,'class'=>'form-control','disabled'=>'disabled'] );
+                    echo $this->Form->control('email',['required'=>true,'class'=>'form-control','disabled'=>'disabled'] );
+                    echo $this->Form->control('password',['required'=>true,'class'=>'form-control','disabled'=>'disabled'] );
+                    echo $this->Form->control('profile_id',['required'=>true,'class'=>'form-control','disabled'=>'disabled','type'=>'select','options'=>$userProfiles ,'empty'=>'Seleccione una Opción' ] );
+                    echo $this->Form->control('state_id',['required'=>true,'class'=>'form-control','disabled'=>'disabled','type'=>'select','options'=>$userStates ,'empty'=>'Seleccione una Opción'] );
                 ?>
             </fieldset>
             <br>

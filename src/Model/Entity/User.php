@@ -23,11 +23,6 @@ class User extends Entity
         'modified' => true,
     ];
 
-    /**
-     * Fields that are excluded from JSON versions of the entity.
-     *
-     * @var array<string>
-     */
     protected array $_hidden = [
         'password',
     ];
