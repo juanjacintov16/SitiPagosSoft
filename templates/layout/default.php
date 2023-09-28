@@ -213,7 +213,7 @@
                     <ul>
                         <li class="navigation-divider">Portal</li>
                         <li>
-                            <a href="#">Basic</a>
+                            <a href="#">Modulo Cuentas</a>
                             <ul>
                                 <li><a href="alerts.html">Alert</a></li>
                                 <li><a href="accordion.html">Accordion</a></li>
@@ -222,6 +222,17 @@
                                 <li><a href="list-group.html">List Group</a></li>
                             </ul>
                         </li>
+                        <li>
+                            <a href="#">Modulo Pagos</a>
+                            <ul>
+                                <li><a href="alerts.html">Alert</a></li>
+                                <li><a href="accordion.html">Accordion</a></li>
+                                <li><a href="buttons.html">Buttons</a></li>
+                                <li><a href="dropdown.html">Dropdown</a></li>
+                                <li><a href="list-group.html">List Group</a></li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
                 <div id="pages">
                     <ul>
