@@ -17,6 +17,12 @@
 
     <!-- App styles -->
     <link rel="stylesheet" href="<?=$webroot;?>css/app.min.css" type="text/css">
+
+    <style>
+        .btn-primary, .btn-info , .btn-danger , .btn-warning , .btn-success { 
+            color : white !important;
+        }
+    </style>
 </head>
 <body>
 
@@ -106,7 +112,7 @@
             <!-- begin::navigation-logo -->
             <div>
                 <div id="navigation-logo">
-                    <a href="index.html">
+                    <a href="<?=$webroot;?>">
                         <img class="logo" src="<?=$webroot;?>media/image/logo.png" alt="logo">
                         <img class="logo-light" src="<?=$webroot;?>media/image/logo-light.png" alt="light logo">
                     </a>
@@ -211,23 +217,24 @@
                     <ul>
                         <li class="navigation-divider">Portal</li>
                         <li>
-                            <a href="#">Modulo Cuentas</a>
+                            <?= $this->Html->link(__('<strong>Usuarios</strong>'), ['controller'=>'Users','action' => 'index'], ['class'=>'','escape'=>false] ) ?>
+                        </li>
+                        <li>
+                            <a href="#"><strong>Modulo Cuentas</strong></a>
                             <ul>
-                                <li><a href="alerts.html">Alert</a></li>
-                                <li><a href="accordion.html">Accordion</a></li>
-                                <li><a href="buttons.html">Buttons</a></li>
-                                <li><a href="dropdown.html">Dropdown</a></li>
-                                <li><a href="list-group.html">List Group</a></li>
+                                <li><?= $this->Html->link(__('Usuarios'), ['controller'=>'Users','action' => 'index'], ['class'=>'','escape'=>false] ) ?></li>
+                                <li><?= $this->Html->link(__('Usuarios'), ['controller'=>'Users','action' => 'index'], ['class'=>'','escape'=>false] ) ?></li>
+                                <li><?= $this->Html->link(__('Usuarios'), ['controller'=>'Users','action' => 'index'], ['class'=>'','escape'=>false] ) ?></li>
+                                <li><?= $this->Html->link(__('Usuarios'), ['controller'=>'Users','action' => 'index'], ['class'=>'','escape'=>false] ) ?></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="#">Modulo Pagos</a>
+                            <a href="#"><strong>Modulo Pagos</strong></a>
                             <ul>
-                                <li><a href="alerts.html">Alert</a></li>
-                                <li><a href="accordion.html">Accordion</a></li>
-                                <li><a href="buttons.html">Buttons</a></li>
-                                <li><a href="dropdown.html">Dropdown</a></li>
-                                <li><a href="list-group.html">List Group</a></li>
+                                <li><?= $this->Html->link(__('Usuarios'), ['controller'=>'Users','action' => 'index'], ['class'=>'','escape'=>false] ) ?></li>
+                                <li><?= $this->Html->link(__('Usuarios'), ['controller'=>'Users','action' => 'index'], ['class'=>'','escape'=>false] ) ?></li>
+                                <li><?= $this->Html->link(__('Usuarios'), ['controller'=>'Users','action' => 'index'], ['class'=>'','escape'=>false] ) ?></li>
+                                <li><?= $this->Html->link(__('Usuarios'), ['controller'=>'Users','action' => 'index'], ['class'=>'','escape'=>false] ) ?></li>
                             </ul>
                         </li>
                     </ul>

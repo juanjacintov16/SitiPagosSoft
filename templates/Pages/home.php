@@ -1,7 +1,8 @@
-<h3>Pagina Inicial</h3>
-<br>
+<h3>Dashboard</h3>
+<br><br>
 
-<pre>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium dicta explicabo non? Ipsam libero ex fuga consequuntur harum maiores <br>
-    odio quibusdam asperiores perferendis, ullam reprehenderit accusamus, qui et molestiae incidunt.
-</pre>
+<center>
+    <img src="https://img.freepik.com/vector-premium/desarrollo-web-personas-diminutas-enorme-tableta-portatil-software-telefono-creando-procesos-adaptacion-aplicaciones-diferentes-medios-electronicos-disenadores-interfaz-usuario-programadores-concepto-vectorial_176411-4455.jpg" class="rounded" alt="image" width="50%">
+</center>
+
+<br><br><br><br><br><br>

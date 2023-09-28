@@ -101,14 +101,13 @@ class UsersController extends AppController
     public function login(){
 
         $result = $this->Authentication->getResult();
-        // If the user is logged in send them away.
 
         if ($result->isValid()) {
-            return $this->redirect(['controller' => 'Users','action' => 'index']);
+            return $this->redirect(['controller' => 'Pages','action' => 'home']);
         }
 
         if ($this->request->is('post')) {
-            $this->Flash->error('Invalid username or password');
+            $this->Flash->error('Usuario o contraseña invalidas.');
         }
 
     }
@@ -117,15 +116,10 @@ class UsersController extends AppController
     {
 
         $result = $this->Authentication->getResult();
-
         // regardless of POST or GET, redirect if user is logged in
-
         if ($result && $result->isValid()) {
-
-        $this->Authentication->logout();
-
-        return $this->redirect(['controller' => 'Users', 'action' => 'login']);
-
+            $this->Authentication->logout();
+            return $this->redirect(['controller' => 'Users', 'action' => 'login']);
         }
 
     }

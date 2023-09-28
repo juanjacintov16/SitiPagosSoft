@@ -1,13 +1,14 @@
 <div class="form-row">
     <div class="col-md-6 mb-3">
-        <div class="users form content">
-            <?= $this->Form->create($user,['class'=>'needs-validation','novalidate'=>'novalidate' ] ) ?>
+        <div class="products form content">
+            <?= $this->Form->create($product,['class'=>'needs-validation','novalidate'=>'novalidate' ] ) ?>
             <fieldset>
                 <h5>Detalle</h5>
                 <br>
                 <?php
-                    echo $this->Form->control('username',['class'=>'form-control','disabled'=>'disabled'] );
-                    echo $this->Form->control('email',['class'=>'form-control','disabled'=>'disabled'] );
+                    echo $this->Form->control('name',['class'=>'form-control','disabled'=>'disabled'] );
+                    echo $this->Form->control('type',['class'=>'form-control','disabled'=>'disabled'] );
+                    echo $this->Form->control('color',['class'=>'form-control','disabled'=>'disabled'] );
                 ?>
             </fieldset>
             <br>

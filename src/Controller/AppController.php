@@ -37,11 +37,8 @@ class AppController extends Controller
         $this->loadComponent('Flash');
 
         //Variables Globales
-        $webroot="http://".$_SERVER['SERVER_NAME'] .":". $_SERVER['SERVER_PORT']."/SitiPagosSoft/";
-        
-
+        $webroot="http://".@$_SERVER['SERVER_NAME'] .":". @$_SERVER['SERVER_PORT']."/SitiPagosSoft/";
         $this->webroot=$webroot;
-
         $this->set(compact('webroot'));
 
         $this->loadComponent('Authentication.Authentication');

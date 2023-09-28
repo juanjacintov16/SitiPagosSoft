@@ -4,30 +4,27 @@
  * @var \App\Model\Entity\User $user
  */
 ?>
-<div class="row">
-    <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $user->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $user->id), 'class' => 'side-nav-item']
-            ) ?>
-            <?= $this->Html->link(__('List Users'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-        </div>
-    </aside>
-    <div class="column column-80">
+<div class="form-row">
+    <div class="col-md-6 mb-3">
         <div class="users form content">
-            <?= $this->Form->create($user) ?>
+            <?= $this->Form->create($user,['class'=>'needs-validation','novalidate'=>'novalidate' ] ) ?>
             <fieldset>
-                <legend><?= __('Edit User') ?></legend>
+                <h5>Registrar</h5>
+                <br>
                 <?php
-                    echo $this->Form->control('username');
-                    echo $this->Form->control('email');
-                    echo $this->Form->control('password');
+                    echo $this->Form->control('username',['required'=>true,'class'=>'form-control'] );
+                    echo $this->Form->control('email',['required'=>true,'class'=>'form-control'] );
+                    echo $this->Form->control('password',['required'=>true,'class'=>'form-control'] );
                 ?>
             </fieldset>
-            <?= $this->Form->button(__('Submit')) ?>
+            <br>
+
+            <?= $this->Html->link(__('<i class="ti-angle-left mr-2"></i> Regresar'), ['action' => 'index'], ['class' => 'btn btn-primary btn-uppercase','escape'=>false],['escape'=>false] ) ?>
+
+            <button type="submit" class="btn btn-success btn-uppercase">
+                <i class="ti-check-box mr-2"></i> Guardar
+            </button>
+            
             <?= $this->Form->end() ?>
         </div>
     </div>

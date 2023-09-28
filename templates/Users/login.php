@@ -9,7 +9,6 @@
     <input name="password" type="password" class="form-control" placeholder="Password" required autofocus>
 
     <button class="btn btn-primary btn-block">Sign in</button>
-    <hr>
-    <a href="./login.html" class="btn btn-sm btn-outline-light ml-1">Sign out</a>
+
 <?= $this->Form->end() ?>
 <!-- ./ form -->

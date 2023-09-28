@@ -1,11 +1,10 @@
 <?php
-/**
- * @var \App\View\AppView $this
- * @var array $params
- * @var string $message
- */
+
 if (!isset($params['escape']) || $params['escape'] !== false) {
     $message = h($message);
 }
 ?>
-<div class="message success" onclick="this.classList.add('hidden')"><?= $message ?></div>
+<div class="alert alert-success alert-dismissible" role="alert">
+  <h4 class="alert-heading">Notificación!</h4>
+  <p class="mb-0"><?= $message ?></p>
+</div>

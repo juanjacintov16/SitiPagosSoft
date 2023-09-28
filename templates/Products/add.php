@@ -1,20 +1,20 @@
 <?php
 /**
  * @var \App\View\AppView $this
- * @var \App\Model\Entity\User $user
+ * @var \App\Model\Entity\Product $product
  */
 ?>
 <div class="form-row">
     <div class="col-md-6 mb-3">
-        <div class="users form content">
-            <?= $this->Form->create($user,['class'=>'needs-validation','novalidate'=>'novalidate' ] ) ?>
+        <div class="products form content">
+            <?= $this->Form->create($product,['class'=>'needs-validation','novalidate'=>'novalidate' ] ) ?>
             <fieldset>
                 <h5>Registrar</h5>
                 <br>
                 <?php
-                    echo $this->Form->control('username',['required'=>true,'class'=>'form-control'] );
-                    echo $this->Form->control('email',['required'=>true,'class'=>'form-control'] );
-                    echo $this->Form->control('password',['required'=>true,'class'=>'form-control'] );
+                    echo $this->Form->control('name',['required'=>true,'class'=>'form-control'] );
+                    echo $this->Form->control('type',['required'=>true,'class'=>'form-control'] );
+                    echo $this->Form->control('color',['required'=>true,'class'=>'form-control'] );
                 ?>
             </fieldset>
             <br>
