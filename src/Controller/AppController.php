@@ -28,23 +28,19 @@ use Cake\Controller\Controller;
  */
 class AppController extends Controller
 {
-    /**
-     * Initialization hook method.
-     *
-     * Use this method to add common initialization code like loading components.
-     *
-     * e.g. `$this->loadComponent('FormProtection');`
-     *
-     * @return void
-     */
+    public $webroot;  
+
     public function initialize(): void
     {
         parent::initialize();
 
         $this->loadComponent('Flash');
 
+        //Variables Globales
         $webroot="http://localhost/SitiPagosSoft/";
-        $this->set(compact('webroot'));
 
+        $this->webroot=$webroot;
+
+        $this->set(compact('webroot'));
     }
 }
