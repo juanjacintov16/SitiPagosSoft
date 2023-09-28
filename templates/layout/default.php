@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -63,12 +63,10 @@
                             </figure>
                         </div>
                         <div class="dropdown-menu-body">
-
                             <div class="list-group list-group-flush">
-
-                                <a href="#" class="list-group-item" data-sidebar-target="#settings">Billing</a>
-                                <a href="#" class="list-group-item" data-sidebar-target="#settings">Need help?</a>
-                                <a href="#" class="list-group-item text-danger" data-sidebar-target="#settings">Cerrar Session</a>
+                                <a href="#" class="list-group-item" data-sidebar-target="#settings"><?= $username = $this->Identity->get('username'); ?></a>
+                                <a href="#" class="list-group-item" data-sidebar-target="#settings"><?= $username = $this->Identity->get('email'); ?></a>
+                                <?= $this->Html->link('Salir',['controller' => 'Users','action' => 'logout'], ['class' => 'list-group-item text-danger']  ) ?>
                             </div>
                         </div>
                     </div>
@@ -310,6 +308,7 @@
                             <?= $this->fetch('content') ?>                           
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>

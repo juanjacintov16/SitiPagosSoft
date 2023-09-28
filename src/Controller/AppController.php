@@ -37,10 +37,20 @@ class AppController extends Controller
         $this->loadComponent('Flash');
 
         //Variables Globales
-        $webroot="http://localhost/SitiPagosSoft/";
+        $webroot="http://".$_SERVER['SERVER_NAME'] .":". $_SERVER['SERVER_PORT']."/SitiPagosSoft/";
+        
 
         $this->webroot=$webroot;
 
         $this->set(compact('webroot'));
+
+        $this->loadComponent('Authentication.Authentication');
+    }
+
+    public function beforeFilter(\Cake\Event\EventInterface $event){
+
+        parent::beforeFilter($event);
+        $this->Authentication->allowUnauthenticated(['login','add']);
+
     }
 }

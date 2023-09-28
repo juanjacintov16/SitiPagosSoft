@@ -55,7 +55,6 @@ Entro al método middelware y después del
 
 Agregamos a continuación el método
 public function getAuthenticationService(ServerRequestInterface $request): AuthenticationServiceInterface
-
 {
 
     $authenticationService = new AuthenticationService([
@@ -66,10 +65,7 @@ public function getAuthenticationService(ServerRequestInterface $request): Authe
 
     ]);
 
-
-
     // Load identifiers, ensure we check email and password fields
-
     $authenticationService->loadIdentifier('Authentication.Password', [
 
         'fields' => [
