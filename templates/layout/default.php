@@ -17,6 +17,16 @@
 
     <!-- App styles -->
     <link rel="stylesheet" href="<?=$webroot;?>css/app.min.css" type="text/css">
+    
+    <!-- Select2 -->
+    <link rel="stylesheet" href="<?=$webroot;?>css/select2.css" type="text/css">
+
+    <!-- DataTable -->
+    <link rel="stylesheet" href="<?=$webroot;?>css/dataTables.bootstrap4.min.css" type="text/css">
+    <link rel="stylesheet" href="<?=$webroot;?>css/responsive.bootstrap4.min.css" type="text/css">
+
+    <!-- DataTable -->
+    <script src="<?=$webroot;?>js/jquery-3.7.0.js"></script>
 
 
 </head>
@@ -347,5 +357,30 @@
 
 <!-- App scripts -->
 <script src="<?=$webroot;?>js/app.js"></script>
+
+<!-- Select2 -->
+
+<script src="<?=$webroot;?>js/select2.js"></script>
+<script src="<?=$webroot;?>js/i18n/es.js"></script>
+
+<!-- Parsley -->
+
+<script src="<?=$webroot;?>js/parsley.js"></script>
+<script src="<?=$webroot;?>js/i18/es.js"></script>
+
+
+<!-- DataTable -->
+
+<script src="<?=$webroot;?>js/popper.min.js"></script>
+<script src="<?=$webroot;?>js/bootstrap.min.js"></script>
+<script src="<?=$webroot;?>js/jquery.dataTables.min.js"></script>
+<script src="<?=$webroot;?>js/dataTables.bootstrap4.min.js"></script>
+<script src="<?=$webroot;?>js/dataTables.responsive.min.js"></script>
+<script src="<?=$webroot;?>js/responsive.bootstrap4.min.js"></script>
+
+
+<!-- Personalized -->
+<script src="<?=$webroot;?>js/personalized.js"></script> 
+
 </body>
 </html>

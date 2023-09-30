@@ -27,7 +27,7 @@ use Cake\ORM\Entity;
  * @property string|null $type_relation
  * @property float|null $limit_amount
  * @property string|null $destination_account
- * @property string|null $verified
+ * @property int|null $verified
  * @property int|null $state_id
  *
  * @property \App\Model\Entity\AccountType $account_type

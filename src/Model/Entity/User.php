@@ -16,11 +16,14 @@ class User extends Entity
     }
 
     protected array $_accessible = [
-        'username' => true,
+        'name' => true,
+        'last_name' => true,
         'email' => true,
         'password' => true,
         'created' => true,
         'modified' => true,
+        'profile_id' => true,
+        'state_id' => true,
     ];
 
     protected array $_hidden = [

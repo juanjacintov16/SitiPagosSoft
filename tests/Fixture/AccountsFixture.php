@@ -38,7 +38,7 @@ class AccountsFixture extends TestFixture
                 'type_relation' => 'Lorem ipsum dolor sit amet',
                 'limit_amount' => 1,
                 'destination_account' => 'Lorem ipsum dolor sit amet',
-                'verified' => 'Lorem ipsum dolor sit amet',
+                'verified' => 1,
                 'state_id' => 1,
             ],
         ];

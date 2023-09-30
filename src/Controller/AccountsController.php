@@ -14,8 +14,18 @@ class AccountsController extends AppController
     }
 
     public function view($id = null){
-        $account = $this->Accounts->get($id, contain: ['AccountTypes', 'AccountStates']);
-        $this->set(compact('account'));
+        $account = $this->Accounts->get($id, contain: []);
+        if ($this->request->is(['patch', 'post', 'put'])) {
+            $account = $this->Accounts->patchEntity($account, $this->request->getData());
+            if ($this->Accounts->save($account)) {
+                $this->Flash->success('Registro actualizado correctamente.',["class"=>"alert alert-success"] );
+                return $this->redirect(['action' => 'index']);
+            }
+            $this->Flash->error('Ocurrio un problema al guardar el regitro.',["class"=>"alert alert-danger"] );
+        }
+        $accountTypes = $this->Accounts->AccountTypes->find('list', limit: 200)->all();
+        $accountStates = $this->Accounts->AccountStates->find('list', limit: 200)->all();
+        $this->set(compact('account', 'accountTypes', 'accountStates'));
     }
 
     public function add(){

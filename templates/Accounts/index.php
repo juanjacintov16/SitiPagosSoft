@@ -1,34 +1,34 @@
 <div class="accounts index content">
-<h4><?= __('Cuentas') ?></h4>
+<h4><?= __('Accounts') ?></h4>
     <div class="pull-right">
         <?= $this->Html->link(__('<i class="ti-plus mr-2"></i> Registrar'), ['action' => 'add'], ['class' => 'btn btn-success waves-effect width-md waves-light','escape'=>false ]) ?>
     </div>
     <br><br><br>
     <div class="table-responsive">
-        <table class="table table-striped table-bordered dt-responsive nowrap dataTable no-footer dtr-inline">
+        <table class="table table-striped table-bordered nowrap" id="dataTable">
             <thead>
                 <tr>
-                    <th><?= ucwords('id') ?></th>
-                    <th><?= ucwords('Tipo') ?></th>
-                    <th><?= ucwords('Beneficiario') ?></th>
-                    <th><?= ucwords('Número Cuenta') ?></th>
-                    <th><?= ucwords('Tipo Registro') ?></th>
-                    <th><?= ucwords('Divisa') ?></th>
-                    <th><?= ucwords('Clabe') ?></th>
-                    <th><?= ucwords('Persona Fisica') ?></th>
-                    <th><?= ucwords('Nombre Persona') ?></th>
-                    <th><?= ucwords('Apellido Paterno') ?></th>
-                    <th><?= ucwords('Apellido Materno') ?></th>
-                    <th><?= ucwords('Razón Social') ?></th>
-                    <th><?= ucwords('Curp/Rfc') ?></th>
-                    <th><?= ucwords('Alias') ?></th>
-                    <th><?= ucwords('Correo Notificación') ?></th>
-                    <th><?= ucwords('Relación') ?></th>
-                    <th><?= ucwords('Tipo Relación') ?></th>
-                    <th><?= ucwords('Monto Limite Operación') ?></th>
-                    <th><?= ucwords('Cuenta Destino') ?></th>
-                    <th><?= ucwords('Verificado') ?></th>
-                    <th><?= ucwords('Estado') ?></th>
+                    <th>Id</th>
+                    <th>Type_Id</th>
+                    <th>Beneficiary</th>
+                    <th>Account_Number</th>
+                    <th>Type_Register</th>
+                    <th>Badge</th>
+                    <th>Clabe</th>
+                    <th>Physical_Person</th>
+                    <th>Name</th>
+                    <th>Last_Name</th>
+                    <th>Mothers_Last_Name</th>
+                    <th>Business_Name</th>
+                    <th>Rfc_Curp</th>
+                    <th>Alias</th>
+                    <th>Email_Notification</th>
+                    <th>Relation</th>
+                    <th>Type_Relation</th>
+                    <th>Limit_Amount</th>
+                    <th>Destination_Account</th>
+                    <th>Verified</th>
+                    <th>State_Id</th>
                     <th class="actions"><?= __('Acciones') ?></th>
                 </tr>
             </thead>
@@ -54,26 +54,15 @@
                     <td><?= h($account->type_relation) ?></td>
                     <td><?= $account->limit_amount === null ? '' : $this->Number->format($account->limit_amount) ?></td>
                     <td><?= h($account->destination_account) ?></td>
-                    <td><?= h($account->verified) ?></td>
+                    <td><?= $account->verified === null ? '' : $this->Number->format($account->verified) ?></td>
                     <td><?= $account->hasValue('account_state') ? $this->Html->link($account->account_state->state, ['controller' => 'AccountStates', 'action' => 'view', $account->account_state->id]) : '' ?></td>
-                    <td class="actions">
-                        <?= $this->Html->link(__('<i class="ti-eye mr-2"></i> Detalle'), ['action' => 'view', $account->id],['escape'=>false,'class'=>'btn btn-info'] ) ?>
-                        <?= $this->Html->link(__('<i class="ti-pencil mr-2"></i> Editar'), ['action' => 'edit', $account->id],['escape'=>false,'class'=>'btn btn-warning'] ) ?>
-                        <?= $this->Form->postLink(__('<i class="ti-trash mr-2"></i> Eliminar'), ['action' => 'delete', $account->id], ['escape'=>false,'class'=>'btn btn-danger','confirm' => __('Estas seguro de eliminar el registro # {0}?', $account->id)] ,['class'=>'btn btn-danger'] ) ?>
+                    <td>                        
+                        <?= $this->Html->link(__('<i class="ti-eye mr-2"></i> Detalle'), ['action' => 'view', $account->id],['escape'=>false,'class'=>'btn btn-primary btn-rounded'] ) ?>
+                        <?= $this->Html->link(__('<i class="ti-pencil mr-2"></i> Editar'), ['action' => 'edit', $account->id],['escape'=>false,'class'=>'btn btn-warning btn-rounded'] ) ?>
                     </td>
                 </tr>
                 <?php endforeach; ?>
             </tbody>
         </table>
-    </div>
-    <div class="paginator">
-        <ul class="pagination">
-            <?= $this->Paginator->first('<< ' . __('primera'),["class"=>"btn btn-primary"] ) ?>
-            <?= $this->Paginator->prev('< ' . __('anterior') ,["class"=>"btn btn-primary"] ) ?>
-            <?= $this->Paginator->numbers() ?>
-            <?= $this->Paginator->next(__('siguiente') . ' >') ?>
-            <?= $this->Paginator->last(__('ultima') . ' >>') ?>
-        </ul>
-        <p><?= $this->Paginator->counter(__('Pagina {{page}}  de  {{paginas}}, mostrando {{current}} registros(s) de {{count}} total')) ?></p>
     </div>
 </div>

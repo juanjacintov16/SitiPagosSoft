@@ -30,31 +30,5 @@ class UsersTable extends Table
         ]);
     }
 
-    public function validationDefault(Validator $validator): Validator{
-        $validator
-            ->scalar('username')
-            ->maxLength('username', 255)
-            ->requirePresence('username', 'create')
-            ->notEmptyString('username');
 
-        $validator
-            ->email('email')
-            ->requirePresence('email', 'create')
-            ->notEmptyString('email')
-            ->add('email', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);
-
-        $validator
-            ->scalar('password')
-            ->maxLength('password', 255)
-            ->requirePresence('password', 'create')
-            ->notEmptyString('password');
-
-        return $validator;
-    }
-
-    public function buildRules(RulesChecker $rules): RulesChecker{
-        $rules->add($rules->isUnique(['username']), ['errorField' => 'username']);
-        $rules->add($rules->isUnique(['email']), ['errorField' => 'email']);
-        return $rules;
-    }
 }

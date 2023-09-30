@@ -29,6 +29,7 @@ class UsersController extends AppController
                 $this->Flash->success('Registro guardado correctamente.',["class"=>"alert alert-success"] );
                 return $this->redirect(['action' => 'index']);
             }
+
             $this->Flash->error('Ocurrio un problema al guardar el regitro.',["class"=>"alert alert-danger"] );
         }
         $userProfiles=$this->Users->UserProfiles->find('list')->toarray();

@@ -52,6 +52,12 @@ class AccountsTable extends Table
         ]);
     }
 
+    /**
+     * Default validation rules.
+     *
+     * @param \Cake\Validation\Validator $validator Validator instance.
+     * @return \Cake\Validation\Validator
+     */
     public function validationDefault(Validator $validator): Validator
     {
         $validator
@@ -142,7 +148,7 @@ class AccountsTable extends Table
             ->allowEmptyString('destination_account');
 
         $validator
-            ->scalar('verified')
+            ->integer('verified')
             ->allowEmptyString('verified');
 
         $validator
@@ -152,6 +158,13 @@ class AccountsTable extends Table
         return $validator;
     }
 
+    /**
+     * Returns a rules checker object that will be used for validating
+     * application integrity.
+     *
+     * @param \Cake\ORM\RulesChecker $rules The rules object to be modified.
+     * @return \Cake\ORM\RulesChecker
+     */
     public function buildRules(RulesChecker $rules): RulesChecker
     {
         $rules->add($rules->existsIn('type_id', 'AccountTypes'), ['errorField' => 'type_id']);
