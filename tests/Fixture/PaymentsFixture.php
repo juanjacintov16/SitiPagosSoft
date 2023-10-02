@@ -28,10 +28,10 @@ class PaymentsFixture extends TestFixture
                 'state_id' => 1,
                 'charges_id' => 1,
                 'created_by' => 1,
-                'created' => '2023-10-02 14:09:32',
+                'created' => '2023-10-02 14:36:47',
                 'approved_by' => 1,
-                'approved' => '2023-10-02 14:09:32',
-                'applied' => '2023-10-02 14:09:32',
+                'approved' => '2023-10-02 14:36:47',
+                'applied' => '2023-10-02 14:36:47',
             ],
         ];
         parent::init();

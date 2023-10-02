@@ -42,7 +42,7 @@ class AccountsTable extends Table
         parent::initialize($config);
 
         $this->setTable('accounts');
-        $this->setDisplayField('account_number');
+        $this->setDisplayField(['beneficiary','account_number']);
         $this->setPrimaryKey('id');
 
         $this->belongsTo('AccountTypes', [
@@ -53,6 +53,9 @@ class AccountsTable extends Table
         ]);
         $this->belongsTo('AccountStates', [
             'foreignKey' => 'state_id',
+        ]);
+        $this->hasMany('Payments', [
+            'foreignKey' => 'account_id',
         ]);
     }
 

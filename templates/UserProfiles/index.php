@@ -1,5 +1,5 @@
 <div class="userProfiles index content">
-<h4><?= __('User Profiles') ?></h4>
+<h4><?= __('Perfiles de Usuario') ?></h4>
     <div class="pull-right">
         <?= $this->Html->link(__('<i class="ti-plus mr-2"></i> Registrar'), ['action' => 'add'], ['class' => 'btn btn-success btn-uppercase','escape'=>false ]) ?>
     </div>
@@ -9,7 +9,7 @@
             <thead class="thead-dark">
                 <tr>
                     <th>Id</th>
-                    <th>Profile</th>
+                    <th>Perfil</th>
                     <th class="actions"><?= __('Acciones') ?></th>
                 </tr>
             </thead>

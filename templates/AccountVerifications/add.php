@@ -1,6 +1,6 @@
 
 <div class="accountVerifications form content">
-    <h5>Registrar</h5>
+    <h5><?= __('Add Account Verification') ?></h5>
 </div>
 <br>
 

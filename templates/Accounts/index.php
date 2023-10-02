@@ -9,26 +9,26 @@
             <thead class="thead-dark">
                 <tr>
                     <th>Id</th>
-                    <th>Type_Id</th>
-                    <th>Beneficiary</th>
-                    <th>Account_Number</th>
-                    <th>Type_Register</th>
+                    <th>Tipo<br>Cuenta</th>
+                    <th>Beneficiario</th>
+                    <th>Numéro<br>Cuenta</th>
+                    <th>Tipo<br>Registro</th>
                     <th>Divisa</th>
                     <th>Clabe</th>
-                    <th>Physical_Person</th>
-                    <th>Name</th>
-                    <th>Last_Name</th>
-                    <th>Mothers_Last_Name</th>
-                    <th>Business_Name</th>
-                    <th>Rfc_Curp</th>
+                    <th>Persona<br>Fisica</th>
+                    <th>Nombre</th>
+                    <th>Apellido<br>Paterno</th>
+                    <th>Apellido<br>Materno</th>
+                    <th>Razón<br>Social</th>
+                    <th>Rfc / Curp</th>
                     <th>Alias</th>
-                    <th>Email_Notification</th>
-                    <th>Relation</th>
-                    <th>Type_Relation</th>
-                    <th>Limit_Amount</th>
-                    <th>Destination_Account</th>
-                    <th>Verified_Id</th>
-                    <th>State_Id</th>
+                    <th>Email</th>
+                    <th>Relación</th>
+                    <th>Tipo<br>Relación</th>
+                    <th>Limite</th>
+                    <th>Cuenta<br>Destino</th>
+                    <th>Verificado<br>por</th>
+                    <th>Estatus</th>
                     <th class="actions"><?= __('Acciones') ?></th>
                 </tr>
             </thead>

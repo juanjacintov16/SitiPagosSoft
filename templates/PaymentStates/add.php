@@ -1,6 +1,6 @@
 
 <div class="paymentStates form content">
-    <h5>Registrar</h5>
+    <h5><?= __('Add Payment State') ?></h5>
 </div>
 <br>
 

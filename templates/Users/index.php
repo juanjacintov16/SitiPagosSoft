@@ -1,5 +1,5 @@
 <div class="users index content">
-<h4><?= __('Users') ?></h4>
+<h4><?= __('Usuarios') ?></h4>
     <div class="pull-right">
         <?= $this->Html->link(__('<i class="ti-plus mr-2"></i> Registrar'), ['action' => 'add'], ['class' => 'btn btn-success btn-uppercase','escape'=>false ]) ?>
     </div>
@@ -9,13 +9,14 @@
             <thead class="thead-dark">
                 <tr>
                     <th>Id</th>
-                    <th>Name</th>
-                    <th>Last_Name</th>
+                    <th>Nombre</th>
+                    <th>Apellido Paterno</th>
+                    <th>Apellido Materno</th>
                     <th>Email</th>
-                    <th>Created</th>
-                    <th>Modified</th>
-                    <th>Profile_Id</th>
-                    <th>State_Id</th>
+                    <th>Creado</th>
+                    <th>Modificado</th>
+                    <th>Perfil</th>
+                    <th>Estatus</th>
                     <th class="actions"><?= __('Acciones') ?></th>
                 </tr>
             </thead>
@@ -25,6 +26,7 @@
                     <td><?= $this->Number->format($user->id) ?></td>
                     <td><?= h($user->name) ?></td>
                     <td><?= h($user->last_name) ?></td>
+                    <td><?= h($user->mothers_last_name) ?></td>
                     <td><?= h($user->email) ?></td>
                     <td><?= h($user->created) ?></td>
                     <td><?= h($user->modified) ?></td>
@@ -40,5 +42,3 @@
         </table>
     </div>
 </div>
-
-

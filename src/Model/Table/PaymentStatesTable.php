@@ -38,7 +38,7 @@ class PaymentStatesTable extends Table
         parent::initialize($config);
 
         $this->setTable('payment_states');
-        $this->setDisplayField('id');
+        $this->setDisplayField('state');
         $this->setPrimaryKey('id');
     }
 

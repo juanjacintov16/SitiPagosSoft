@@ -1,6 +1,6 @@
 
 <div class="accountStates form content">
-    <h5>Registrar</h5>
+    <h5><?= __('Add Account State') ?></h5>
 </div>
 <br>
 

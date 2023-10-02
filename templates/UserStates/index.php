@@ -9,7 +9,7 @@
             <thead class="thead-dark">
                 <tr>
                     <th>Id</th>
-                    <th>State</th>
+                    <th>Estatus</th>
                     <th class="actions"><?= __('Acciones') ?></th>
                 </tr>
             </thead>

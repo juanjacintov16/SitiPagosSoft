@@ -17261,3 +17261,10 @@ span.parsley-error, input.parsley-error, textarea.parsley-error, select.parsley-
 
 
 
+.parsley-errors-list {
+    border-color: #f34943 !important;
+}
+
+.parsley-type{
+    color:  #f34943 !important;
+}

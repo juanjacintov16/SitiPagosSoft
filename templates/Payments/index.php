@@ -9,18 +9,18 @@
             <thead class="thead-dark">
                 <tr>
                     <th>Id</th>
-                    <th>Account_Id</th>
-                    <th>Amount</th>
-                    <th>Tax_Iva</th>
-                    <th>Description</th>
-                    <th>Reference</th>
-                    <th>State_Id</th>
-                    <th>Charges_Id</th>
-                    <th>Created_By</th>
-                    <th>Created</th>
-                    <th>Approved_By</th>
-                    <th>Approved</th>
-                    <th>Applied</th>
+                    <th>Cuenta</th>
+                    <th>Monto</th>
+                    <th>Iva</th>
+                    <th>Descripción</th>
+                    <th>Referencia</th>
+                    <th>Estatus</th>
+                    <th>Pagado</th>
+                    <th>Creado <br> por</th>
+                    <th>Fecha <br> Creación</th>
+                    <th>Aprobado <br> por</th>
+                    <th>Fecha <br> Aprobación</th>
+                    <th>Aplicado</th>
                     <th class="actions"><?= __('Acciones') ?></th>
                 </tr>
             </thead>
@@ -28,7 +28,7 @@
                 <?php foreach ($payments as $payment): ?>
                 <tr>
                     <td><?= $this->Number->format($payment->id) ?></td>
-                    <td><?= $payment->hasValue('account') ? $this->Html->link($payment->account->name, ['controller' => 'Accounts', 'action' => 'view', $payment->account->id]) : '' ?></td>
+                    <td><?= $payment->hasValue('account') ? $this->Html->link($payment->account->account_number, ['controller' => 'Accounts', 'action' => 'view', $payment->account->id]) : '' ?></td>
                     <td><?= $payment->amount === null ? '' : $this->Number->format($payment->amount) ?></td>
                     <td><?= $payment->tax_iva === null ? '' : $this->Number->format($payment->tax_iva) ?></td>
                     <td><?= h($payment->description) ?></td>

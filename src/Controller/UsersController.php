@@ -36,7 +36,7 @@ class UsersController extends AppController
             }
             $this->Flash->error('Ocurrio un problema al guardar el regitro.',["class"=>"alert alert-danger"] );
         }
-        $userStates = $this->Users->UserStates->find('list', limit: 200)->all();
+        $userStates = $this->Users->UserStates->find('list',conditions:['id'=>1])->all();
         $userProfiles = $this->Users->UserProfiles->find('list', limit: 200)->all();
         $this->set(compact('user', 'userStates', 'userProfiles'));
     }

@@ -25,6 +25,8 @@ class UsersTableTest extends TestCase
      */
     protected array $fixtures = [
         'app.Users',
+        'app.UserStates',
+        'app.UserProfiles',
     ];
 
     /**
@@ -49,27 +51,5 @@ class UsersTableTest extends TestCase
         unset($this->Users);
 
         parent::tearDown();
-    }
-
-    /**
-     * Test validationDefault method
-     *
-     * @return void
-     * @uses \App\Model\Table\UsersTable::validationDefault()
-     */
-    public function testValidationDefault(): void
-    {
-        $this->markTestIncomplete('Not implemented yet.');
-    }
-
-    /**
-     * Test buildRules method
-     *
-     * @return void
-     * @uses \App\Model\Table\UsersTable::buildRules()
-     */
-    public function testBuildRules(): void
-    {
-        $this->markTestIncomplete('Not implemented yet.');
     }
 }
