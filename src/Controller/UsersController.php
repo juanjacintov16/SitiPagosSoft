@@ -7,38 +7,11 @@ class UsersController extends AppController
 {
 
     public function index(){
-        $query = $this->Users->find();
-        $users = $this->paginate($query);
+        $users = $this->Users->find()->contain(['UserStates', 'UserProfiles']);
         $this->set(compact('users'));
     }
 
     public function view($id = null){
-
-        $user = $this->Users->get($id, contain: []);
-        $userProfiles=$this->Users->UserProfiles->find('list')->toarray();
-        $userStates=$this->Users->UserStates->find('list')->toarray();
-        $this->set(compact('user','userProfiles','userStates'));
-    }
-
-    public function add(){
-
-        $user = $this->Users->newEmptyEntity();
-        if ($this->request->is('post')) {
-            $user = $this->Users->patchEntity($user, $this->request->getData());
-            if ($this->Users->save($user)) {
-                $this->Flash->success('Registro guardado correctamente.',["class"=>"alert alert-success"] );
-                return $this->redirect(['action' => 'index']);
-            }
-
-            $this->Flash->error('Ocurrio un problema al guardar el regitro.',["class"=>"alert alert-danger"] );
-        }
-        $userProfiles=$this->Users->UserProfiles->find('list')->toarray();
-        $userStates=$this->Users->UserStates->find('list')->toarray();
-        $this->set(compact('user','userProfiles','userStates'));
-    }
-
-    public function edit($id = null){
-
         $user = $this->Users->get($id, contain: []);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
@@ -48,13 +21,42 @@ class UsersController extends AppController
             }
             $this->Flash->error('Ocurrio un problema al guardar el regitro.',["class"=>"alert alert-danger"] );
         }
-        $userProfiles=$this->Users->UserProfiles->find('list')->toarray();
-        $userStates=$this->Users->UserStates->find('list')->toarray();
-        $this->set(compact('user','userProfiles','userStates'));
+        $userStates = $this->Users->UserStates->find('list', limit: 200)->all();
+        $userProfiles = $this->Users->UserProfiles->find('list', limit: 200)->all();
+        $this->set(compact('user', 'userStates', 'userProfiles'));
+    }
+
+    public function add(){
+        $user = $this->Users->newEmptyEntity();
+        if ($this->request->is('post')) {
+            $user = $this->Users->patchEntity($user, $this->request->getData());
+            if ($this->Users->save($user)) {
+                $this->Flash->success('Registro guardado correctamente.',["class"=>"alert alert-success"] );
+                return $this->redirect(['action' => 'index']);
+            }
+            $this->Flash->error('Ocurrio un problema al guardar el regitro.',["class"=>"alert alert-danger"] );
+        }
+        $userStates = $this->Users->UserStates->find('list', limit: 200)->all();
+        $userProfiles = $this->Users->UserProfiles->find('list', limit: 200)->all();
+        $this->set(compact('user', 'userStates', 'userProfiles'));
+    }
+
+    public function edit($id = null){
+        $user = $this->Users->get($id, contain: []);
+        if ($this->request->is(['patch', 'post', 'put'])) {
+            $user = $this->Users->patchEntity($user, $this->request->getData());
+            if ($this->Users->save($user)) {
+                $this->Flash->success('Registro actualizado correctamente.',["class"=>"alert alert-success"] );
+                return $this->redirect(['action' => 'index']);
+            }
+            $this->Flash->error('Ocurrio un problema al guardar el regitro.',["class"=>"alert alert-danger"] );
+        }
+        $userStates = $this->Users->UserStates->find('list', limit: 200)->all();
+        $userProfiles = $this->Users->UserProfiles->find('list', limit: 200)->all();
+        $this->set(compact('user', 'userStates', 'userProfiles'));
     }
 
     public function delete($id = null){
-
         $this->request->allowMethod(['post', 'delete']);
         $user = $this->Users->get($id);
         if ($this->Users->delete($user)) {

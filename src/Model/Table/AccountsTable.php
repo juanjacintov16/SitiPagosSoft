@@ -12,6 +12,7 @@ use Cake\Validation\Validator;
  * Accounts Model
  *
  * @property \App\Model\Table\AccountTypesTable&\Cake\ORM\Association\BelongsTo $AccountTypes
+ * @property \App\Model\Table\AccountVerificationsTable&\Cake\ORM\Association\BelongsTo $AccountVerifications
  * @property \App\Model\Table\AccountStatesTable&\Cake\ORM\Association\BelongsTo $AccountStates
  *
  * @method \App\Model\Entity\Account newEmptyEntity()
@@ -41,11 +42,14 @@ class AccountsTable extends Table
         parent::initialize($config);
 
         $this->setTable('accounts');
-        $this->setDisplayField('name');
+        $this->setDisplayField('account_number');
         $this->setPrimaryKey('id');
 
         $this->belongsTo('AccountTypes', [
             'foreignKey' => 'type_id',
+        ]);
+        $this->belongsTo('AccountVerifications', [
+            'foreignKey' => 'verified_id',
         ]);
         $this->belongsTo('AccountStates', [
             'foreignKey' => 'state_id',
@@ -80,9 +84,9 @@ class AccountsTable extends Table
             ->allowEmptyString('type_register');
 
         $validator
-            ->scalar('badge')
-            ->maxLength('badge', 50)
-            ->allowEmptyString('badge');
+            ->scalar('divisa')
+            ->maxLength('divisa', 50)
+            ->allowEmptyString('divisa');
 
         $validator
             ->scalar('clabe')
@@ -148,8 +152,8 @@ class AccountsTable extends Table
             ->allowEmptyString('destination_account');
 
         $validator
-            ->integer('verified')
-            ->allowEmptyString('verified');
+            ->integer('verified_id')
+            ->allowEmptyString('verified_id');
 
         $validator
             ->integer('state_id')
@@ -168,6 +172,7 @@ class AccountsTable extends Table
     public function buildRules(RulesChecker $rules): RulesChecker
     {
         $rules->add($rules->existsIn('type_id', 'AccountTypes'), ['errorField' => 'type_id']);
+        $rules->add($rules->existsIn('verified_id', 'AccountVerifications'), ['errorField' => 'verified_id']);
         $rules->add($rules->existsIn('state_id', 'AccountStates'), ['errorField' => 'state_id']);
 
         return $rules;

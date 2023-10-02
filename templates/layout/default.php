@@ -248,7 +248,7 @@
                         <li>
                             <a href="#" class="menu">Modulo Pagos</a>
                             <ul>
-                                
+                                <li><?= $this->Html->link(__('Pagos'), ['controller'=>'Payments','action' => 'index'], ['class'=>'','escape'=>false] ) ?></li>
                             </ul>
                         </li>
                     </ul>

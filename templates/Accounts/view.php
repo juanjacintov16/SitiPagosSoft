@@ -24,8 +24,8 @@
                 <?php echo $this->Form->control('type_register',['disabled'=>'disabled','label'=>false,'type'=>'text','class'=>'form-control','required'=>true] ); ?>
             </div>
             <div class="col-md-6 mb-6">
-                <label for="labelBadge" class="labelForm">Badge</label>
-                <?php echo $this->Form->control('badge',['disabled'=>'disabled','label'=>false,'type'=>'text','class'=>'form-control','required'=>true] ); ?>
+                <label for="labelDivisa" class="labelForm">Divisa</label>
+                <?php echo $this->Form->control('divisa',['disabled'=>'disabled','label'=>false,'type'=>'text','class'=>'form-control','required'=>true] ); ?>
             </div>
             <div class="col-md-6 mb-6">
                 <label for="labelClabe" class="labelForm">Clabe</label>
@@ -79,9 +79,10 @@
                 <label for="labelDestination_Account" class="labelForm">Destination_Account</label>
                 <?php echo $this->Form->control('destination_account',['disabled'=>'disabled','label'=>false,'type'=>'text','class'=>'form-control','required'=>true] ); ?>
             </div>
-            <div class="col-md-6 mb-6">
-                <label for="labelVerified" class="labelForm">Verified</label>
-                <?php echo $this->Form->control('verified',['disabled'=>'disabled','label'=>false,'type'=>'text','class'=>'form-control','required'=>true] ); ?>
+            <div class="col-md-6 mb-6"> 
+                <label for="labelVerified_Id" class="labelForm">Verified_Id</label>
+                <?php echo $this->Form->control('verified_id', ['disabled'=>'disabled','label'=>false,'type'=>'select','class'=>'form-control select2','options' => $accountVerifications,'empty'=>'Seleccione una Opción','required'=>true,"data-parsley-errors-container"=>"#custom-parsley-errorVerified_Id" ]); ?>
+                <span id="custom-parsley-errorVerified_Id"></span>
             </div>
             <div class="col-md-6 mb-6"> 
                 <label for="labelState_Id" class="labelForm">State_Id</label>

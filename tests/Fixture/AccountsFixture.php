@@ -24,7 +24,7 @@ class AccountsFixture extends TestFixture
                 'beneficiary' => 'Lorem ipsum dolor sit amet',
                 'account_number' => 'Lorem ipsum dolor sit amet',
                 'type_register' => 'Lorem ipsum dolor sit amet',
-                'badge' => 'Lorem ipsum dolor sit amet',
+                'divisa' => 'Lorem ipsum dolor sit amet',
                 'clabe' => 'Lorem ipsum dolor sit amet',
                 'physical_person' => 1,
                 'name' => 'Lorem ipsum dolor sit amet',
@@ -38,7 +38,7 @@ class AccountsFixture extends TestFixture
                 'type_relation' => 'Lorem ipsum dolor sit amet',
                 'limit_amount' => 1,
                 'destination_account' => 'Lorem ipsum dolor sit amet',
-                'verified' => 1,
+                'verified_id' => 1,
                 'state_id' => 1,
             ],
         ];

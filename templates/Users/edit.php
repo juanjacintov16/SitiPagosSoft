@@ -7,28 +7,28 @@
 <?= $this->Form->create($user,["class"=>"needs-validation","id"=>"form-validate","data-parsley-validate"=>"" ] ) ?>
 <div class="form-row"> 
             <div class="col-md-6 mb-6">
-                <label for="labelName" class="labelForm">Name</label>
+                <label class="labelForm">Name</label>
                 <?php echo $this->Form->control('name',['label'=>false,'type'=>'text','class'=>'form-control','required'=>true] ); ?>
             </div>
             <div class="col-md-6 mb-6">
-                <label for="labelLast_Name" class="labelForm">Last_Name</label>
+                <label class="labelForm">Last_Name</label>
                 <?php echo $this->Form->control('last_name',['label'=>false,'type'=>'text','class'=>'form-control','required'=>true] ); ?>
             </div>
             <div class="col-md-6 mb-6">
-                <label for="labelEmail" class="labelForm">Email</label>
+                <label class="labelForm">Email</label>
                 <?php echo $this->Form->control('email',['label'=>false,'type'=>'text','class'=>'form-control','required'=>true] ); ?>
             </div>
             <div class="col-md-6 mb-6">
-                <label for="labelPassword" class="labelForm">Password</label>
+                <label class="labelForm">Password</label>
                 <?php echo $this->Form->control('password',['label'=>false,'type'=>'text','class'=>'form-control','required'=>true] ); ?>
             </div>
             <div class="col-md-6 mb-6">
-                <label for="labelProfile_Id" class="labelForm">Profile_Id</label>
+                <label class="labelForm">Profile_Id</label>
                 <?php echo $this->Form->control('profile_id', ['label'=>false,'type'=>'select','class'=>'form-control select2','options' => $userProfiles,'empty'=>'Seleccione una Opción','required'=>true,"data-parsley-errors-container"=>"#custom-parsley-errorProfile_Id" ]); ?>
                 <span id="custom-parsley-errorProfile_Id"></span>
             </div>
             <div class="col-md-6 mb-6">
-                <label for="labelState_Id" class="labelForm">State_Id</label>
+                <label class="labelForm">State_Id</label>
                 <?php echo $this->Form->control('state_id', ['label'=>false,'type'=>'select','class'=>'form-control select2','options' => $userStates,'empty'=>'Seleccione una Opción','required'=>true,"data-parsley-errors-container"=>"#custom-parsley-errorState_Id" ]); ?>
                 <span id="custom-parsley-errorState_Id"></span>
             </div>

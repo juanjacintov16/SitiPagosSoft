@@ -7,13 +7,20 @@ class AccountTypesController extends AppController
 {
 
     public function index(){
-        $query = $this->AccountTypes->find();
-        $accountTypes = $this->paginate($query);
+        $accountTypes = $this->AccountTypes->find();
         $this->set(compact('accountTypes'));
     }
 
     public function view($id = null){
         $accountType = $this->AccountTypes->get($id, contain: []);
+        if ($this->request->is(['patch', 'post', 'put'])) {
+            $accountType = $this->AccountTypes->patchEntity($accountType, $this->request->getData());
+            if ($this->AccountTypes->save($accountType)) {
+                $this->Flash->success('Registro actualizado correctamente.',["class"=>"alert alert-success"] );
+                return $this->redirect(['action' => 'index']);
+            }
+            $this->Flash->error('Ocurrio un problema al guardar el regitro.',["class"=>"alert alert-danger"] );
+        }
         $this->set(compact('accountType'));
     }
 

@@ -7,9 +7,7 @@ class AccountsController extends AppController
 {
 
     public function index(){
-        $query = $this->Accounts->find()
-            ->contain(['AccountTypes', 'AccountStates']);
-        $accounts = $this->paginate($query);
+        $accounts = $this->Accounts->find()->contain(['AccountTypes', 'AccountVerifications', 'AccountStates']);
         $this->set(compact('accounts'));
     }
 
@@ -24,8 +22,9 @@ class AccountsController extends AppController
             $this->Flash->error('Ocurrio un problema al guardar el regitro.',["class"=>"alert alert-danger"] );
         }
         $accountTypes = $this->Accounts->AccountTypes->find('list', limit: 200)->all();
+        $accountVerifications = $this->Accounts->AccountVerifications->find('list', limit: 200)->all();
         $accountStates = $this->Accounts->AccountStates->find('list', limit: 200)->all();
-        $this->set(compact('account', 'accountTypes', 'accountStates'));
+        $this->set(compact('account', 'accountTypes', 'accountVerifications', 'accountStates'));
     }
 
     public function add(){
@@ -39,8 +38,9 @@ class AccountsController extends AppController
             $this->Flash->error('Ocurrio un problema al guardar el regitro.',["class"=>"alert alert-danger"] );
         }
         $accountTypes = $this->Accounts->AccountTypes->find('list', limit: 200)->all();
+        $accountVerifications = $this->Accounts->AccountVerifications->find('list', limit: 200)->all();
         $accountStates = $this->Accounts->AccountStates->find('list', limit: 200)->all();
-        $this->set(compact('account', 'accountTypes', 'accountStates'));
+        $this->set(compact('account', 'accountTypes', 'accountVerifications', 'accountStates'));
     }
 
     public function edit($id = null){
@@ -54,8 +54,9 @@ class AccountsController extends AppController
             $this->Flash->error('Ocurrio un problema al guardar el regitro.',["class"=>"alert alert-danger"] );
         }
         $accountTypes = $this->Accounts->AccountTypes->find('list', limit: 200)->all();
+        $accountVerifications = $this->Accounts->AccountVerifications->find('list', limit: 200)->all();
         $accountStates = $this->Accounts->AccountStates->find('list', limit: 200)->all();
-        $this->set(compact('account', 'accountTypes', 'accountStates'));
+        $this->set(compact('account', 'accountTypes', 'accountVerifications', 'accountStates'));
     }
 
     public function delete($id = null){

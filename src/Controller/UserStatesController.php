@@ -7,13 +7,20 @@ class UserStatesController extends AppController
 {
 
     public function index(){
-        $query = $this->UserStates->find();
-        $userStates = $this->paginate($query);
+        $userStates = $this->UserStates->find();
         $this->set(compact('userStates'));
     }
 
     public function view($id = null){
         $userState = $this->UserStates->get($id, contain: []);
+        if ($this->request->is(['patch', 'post', 'put'])) {
+            $userState = $this->UserStates->patchEntity($userState, $this->request->getData());
+            if ($this->UserStates->save($userState)) {
+                $this->Flash->success('Registro actualizado correctamente.',["class"=>"alert alert-success"] );
+                return $this->redirect(['action' => 'index']);
+            }
+            $this->Flash->error('Ocurrio un problema al guardar el regitro.',["class"=>"alert alert-danger"] );
+        }
         $this->set(compact('userState'));
     }
 

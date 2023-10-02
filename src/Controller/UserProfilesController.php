@@ -7,13 +7,20 @@ class UserProfilesController extends AppController
 {
 
     public function index(){
-        $query = $this->UserProfiles->find();
-        $userProfiles = $this->paginate($query);
+        $userProfiles = $this->UserProfiles->find();
         $this->set(compact('userProfiles'));
     }
 
     public function view($id = null){
         $userProfile = $this->UserProfiles->get($id, contain: []);
+        if ($this->request->is(['patch', 'post', 'put'])) {
+            $userProfile = $this->UserProfiles->patchEntity($userProfile, $this->request->getData());
+            if ($this->UserProfiles->save($userProfile)) {
+                $this->Flash->success('Registro actualizado correctamente.',["class"=>"alert alert-success"] );
+                return $this->redirect(['action' => 'index']);
+            }
+            $this->Flash->error('Ocurrio un problema al guardar el regitro.',["class"=>"alert alert-danger"] );
+        }
         $this->set(compact('userProfile'));
     }
 

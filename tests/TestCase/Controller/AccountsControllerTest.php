@@ -24,6 +24,7 @@ class AccountsControllerTest extends TestCase
     protected array $fixtures = [
         'app.Accounts',
         'app.AccountTypes',
+        'app.AccountVerifications',
         'app.AccountStates',
     ];
 

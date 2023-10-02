@@ -7,13 +7,20 @@ class AccountStatesController extends AppController
 {
 
     public function index(){
-        $query = $this->AccountStates->find();
-        $accountStates = $this->paginate($query);
+        $accountStates = $this->AccountStates->find();
         $this->set(compact('accountStates'));
     }
 
     public function view($id = null){
         $accountState = $this->AccountStates->get($id, contain: []);
+        if ($this->request->is(['patch', 'post', 'put'])) {
+            $accountState = $this->AccountStates->patchEntity($accountState, $this->request->getData());
+            if ($this->AccountStates->save($accountState)) {
+                $this->Flash->success('Registro actualizado correctamente.',["class"=>"alert alert-success"] );
+                return $this->redirect(['action' => 'index']);
+            }
+            $this->Flash->error('Ocurrio un problema al guardar el regitro.',["class"=>"alert alert-danger"] );
+        }
         $this->set(compact('accountState'));
     }
 

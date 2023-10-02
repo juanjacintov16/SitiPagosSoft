@@ -13,7 +13,7 @@ use Cake\ORM\Entity;
  * @property string|null $beneficiary
  * @property string|null $account_number
  * @property string|null $type_register
- * @property string|null $badge
+ * @property string|null $divisa
  * @property string|null $clabe
  * @property int|null $physical_person
  * @property string|null $name
@@ -27,10 +27,11 @@ use Cake\ORM\Entity;
  * @property string|null $type_relation
  * @property float|null $limit_amount
  * @property string|null $destination_account
- * @property int|null $verified
+ * @property int|null $verified_id
  * @property int|null $state_id
  *
  * @property \App\Model\Entity\AccountType $account_type
+ * @property \App\Model\Entity\AccountVerification $account_verification
  * @property \App\Model\Entity\AccountState $account_state
  */
 class Account extends Entity
@@ -49,7 +50,7 @@ class Account extends Entity
         'beneficiary' => true,
         'account_number' => true,
         'type_register' => true,
-        'badge' => true,
+        'divisa' => true,
         'clabe' => true,
         'physical_person' => true,
         'name' => true,
@@ -63,9 +64,10 @@ class Account extends Entity
         'type_relation' => true,
         'limit_amount' => true,
         'destination_account' => true,
-        'verified' => true,
+        'verified_id' => true,
         'state_id' => true,
         'account_type' => true,
+        'account_verification' => true,
         'account_state' => true,
     ];
 }

@@ -26,6 +26,7 @@ class AccountsTableTest extends TestCase
     protected array $fixtures = [
         'app.Accounts',
         'app.AccountTypes',
+        'app.AccountVerifications',
         'app.AccountStates',
     ];
 
