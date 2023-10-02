@@ -1,5 +1,5 @@
 <div class="userStates index content">
-<h4><?= __('User States') ?></h4>
+<h4><?= __('Usuarios Estatus') ?></h4>
     <div class="pull-right">
         <?= $this->Html->link(__('<i class="ti-plus mr-2"></i> Registrar'), ['action' => 'add'], ['class' => 'btn btn-success btn-uppercase','escape'=>false ]) ?>
     </div>

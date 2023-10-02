@@ -8072,6 +8072,7 @@ textarea {
 }
 .text-facebook {
     color: #3b5998 !important;
+    font-weight: 600;
 }
 .text-twitter {
     color: #55acee !important;

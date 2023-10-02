@@ -69,6 +69,7 @@
                 </a>
             </li>
             <!-- end::header minimize/maximize -->
+            
 
             <!-- begin::user menu -->
             <li class="nav-item dropdown">
@@ -85,9 +86,9 @@
                         </div>
                         <div class="dropdown-menu-body">
                             <div class="list-group list-group-flush">
-                                <a href="#" class="list-group-item" data-sidebar-target="#settings"><?= $username = $this->Identity->get('username'); ?></a>
-                                <a href="#" class="list-group-item" data-sidebar-target="#settings"><?= $username = $this->Identity->get('email'); ?></a>
-                                <?= $this->Html->link('Salir',['controller' => 'Users','action' => 'logout'], ['class' => 'list-group-item text-danger']  ) ?>
+                                <a href="#" class="list-group-item text-facebook" data-sidebar-target="#settings"><center><?= $username = $this->Identity->get('name'); ?> <?= $username = $this->Identity->get('last_name'); ?></center></a>
+                                <a href="#" class="list-group-item text-facebook" data-sidebar-target="#settings"><center><?= $username = $this->Identity->get('email'); ?></center></a>
+                                <?= $this->Html->link('<center>Salir</center>',['controller' => 'Users','action' => 'logout'], ['class' => 'list-group-item text-danger','escape'=>false]  ) ?>
                             </div>
                         </div>
                     </div>
@@ -97,12 +98,19 @@
 
         <!-- begin::mobile header toggler -->
         <ul class="navbar-nav d-flex align-items-center">
+
+            <li class="mobile-toggler d-block d-sm-none">
+                <?= $this->Html->link('<i data-feather="log-out"></i>',['controller' => 'Users','action' => 'logout'], ['class' => 'nav-link' ,'escape'=>false]  ) ?>
+            </li>
+
             <li class="nav-item header-toggler">
                 <a href="#" class="nav-link">
                     <i data-feather="arrow-down"></i>
                 </a>
             </li>
         </ul>
+
+
         <!-- end::mobile header toggler -->
     </div>
 

@@ -1,6 +1,6 @@
 
 <div class="accounts form content">
-    <h5><?= __('Registrar Account') ?></h5>
+    <h5><?= __('Registrar Cuenta') ?></h5>
 </div>
 <br>
 

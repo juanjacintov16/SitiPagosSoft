@@ -1,5 +1,5 @@
 <div class="accounts index content">
-<h4><?= __('Accounts') ?></h4>
+<h4><?= __('Cuentas') ?></h4>
     <div class="pull-right">
         <?= $this->Html->link(__('<i class="ti-plus mr-2"></i> Registrar'), ['action' => 'add'], ['class' => 'btn btn-success btn-uppercase','escape'=>false ]) ?>
     </div>
