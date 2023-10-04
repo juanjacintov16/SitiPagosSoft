@@ -26,9 +26,11 @@
             </thead>
             <tbody>
                 <?php foreach ($payments as $payment): ?>
+                <?php $beneficiary=$payment->account->account_number." ".$payment->account->beneficiary; ?>
+                
                 <tr>
                     <td><?= $this->Number->format($payment->id) ?></td>
-                    <td><?= $payment->hasValue('account') ? $this->Html->link($payment->account->account_number, ['controller' => 'Accounts', 'action' => 'view', $payment->account->id]) : '' ?></td>
+                    <td><?= $payment->hasValue('account') ? $this->Html->link($beneficiary, ['controller' => 'Accounts', 'action' => 'view', $payment->account->id]) : '' ?></td>
                     <td><?= $payment->amount === null ? '' : $this->Number->format($payment->amount) ?></td>
                     <td><?= $payment->tax_iva === null ? '' : $this->Number->format($payment->tax_iva) ?></td>
                     <td><?= h($payment->description) ?></td>

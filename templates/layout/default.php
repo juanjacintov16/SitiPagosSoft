@@ -239,6 +239,7 @@
                 <div class="open" id="elements">
                     <ul>
                         <li class="navigation-divider"> <b>Portal</b> </li>
+                        <?php if($this->Identity->get('profile_id') =="1" ) { ?>
                         <li>
                             <a href="#" class="menu">Seguridad</a>
                             <ul>
@@ -247,6 +248,7 @@
                                 <li><?= $this->Html->link(__('Usuarios Estados'), ['controller'=>'UserStates','action' => 'index'], ['class'=>'','escape'=>false] ) ?></li>
                             </ul>
                         </li>
+                        <?php } ?>
                         <li>
                             <a href="#" class="menu">Modulo Cuentas</a>
                             <ul>
@@ -257,6 +259,12 @@
                             <a href="#" class="menu">Modulo Pagos</a>
                             <ul>
                                 <li><?= $this->Html->link(__('Pagos'), ['controller'=>'Payments','action' => 'index'], ['class'=>'','escape'=>false] ) ?></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="menu">WS</a>
+                            <ul>
+                                <li><?= $this->Html->link(__('WS 1'), ['controller'=>'WebServices','action' => 'index'], ['class'=>'','escape'=>false] ) ?></li>
                             </ul>
                         </li>
                     </ul>

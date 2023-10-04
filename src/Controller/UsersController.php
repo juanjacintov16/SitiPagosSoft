@@ -72,7 +72,7 @@ class UsersController extends AppController
         $result = $this->Authentication->getResult();
 
         if ($result->isValid()) {
-            return $this->redirect(['controller' => 'Pages','action' => 'home']);
+            return $this->redirect(['controller' => 'Payments','action' => 'index']);
         }
 
         if ($this->request->is('post')) {
