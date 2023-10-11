@@ -1,0 +1,69 @@
+{% set fields = Bake.filterFields(fields, schema, modelObject) %}
+
+<div class="{{ pluralVar }} form content">
+    <h5>Detalle</h5>
+</div>
+<br>
+
+<?= $this->Form->create(${{ singularVar }},["class"=>"needs-validation","id"=>"form-validate","data-parsley-validate"=>"" ] ) ?>
+<div class="form-row"> 
+{% for field in fields %}
+{%- if field not in primaryKey %}
+    {%- if keyFields[field] is defined %}
+        {%- set fieldData = Bake.columnData(field, schema) %}
+        {%- if fieldData.null %}
+            <div class="col-md-6 mb-6"> 
+                <label for="label{{ field |title }}" class="labelForm">{{ field |title }}</label>
+                <?php echo $this->Form->control('{{ field }}', ['disabled'=>'disabled','label'=>false,'type'=>'select','class'=>'form-control select2','options' => ${{ keyFields[field] }},'empty'=>'Seleccione una Opción','required'=>true,"data-parsley-errors-container"=>"#custom-parsley-error{{ field |title }}" ]); ?>
+                <span id="custom-parsley-error{{ field |title }}"></span>
+            </div>
+                {{- "\n" }}
+        {%- else %}
+            <div class="col-md-6 mb-6">
+                <label for="label{{ field |title }}" class="labelForm">{{ field |title }}</label>
+                <?php echo $this->Form->control('{{ field }}', ['disabled'=>'disabled','label'=>false,'type'=>'select','class'=>'form-control select2','options' => ${{ keyFields[field] }},'empty'=>'Seleccione una Opción','required'=>true,"data-parsley-errors-container"=>"#custom-parsley-error{{ field |title }}" ]); ?>
+                <span id="custom-parsley-error{{ field |title }}"></span>
+            </div>
+                {{- "\n" }}
+        {%- endif %}
+    {%- elseif field not in ['created', 'modified', 'updated'] %}
+        {%- set fieldData = Bake.columnData(field, schema) %}
+        {%- if fieldData.type in ['date', 'datetime', 'time'] and fieldData.null %}
+            <div class="col-md-6 mb-6">
+                <label for="label{{ field |title }}" class="labelForm">{{ field |title }}</label>
+                <?php echo $this->Form->control('{{ field }}', ['disabled'=>'disabled','label'=>false,'type'=>'text','class'=>'form-control','required'=>true]); ?>
+            </div>
+                {{- "\n" }}
+        {%- else %}
+            <div class="col-md-6 mb-6">
+                <label for="label{{ field |title }}" class="labelForm">{{ field |title }}</label>
+                <?php echo $this->Form->control('{{ field }}',['disabled'=>'disabled','label'=>false,'type'=>'text','class'=>'form-control','required'=>true] ); ?>
+            </div>
+                {{- "\n" }}
+        {%- endif %}
+    {%- endif %}
+{%- endif %}
+{%- endfor %}
+
+{%- if associations.BelongsToMany is defined %}
+{%- for assocName, assocData in associations.BelongsToMany %}
+            <div class="col-md-6 mb-6">
+                <label for="label{{ field |title }}" class="labelForm">{{ field |title }}</label>
+                <?php echo $this->Form->control('{{ assocData.property }}._ids', ['disabled'=>'disabled','label'=>false,'type'=>'select','class'=>'form-control select2','options' => ${{ assocData.variable }} , 'empty'=>'Seleccione una Opción','required'=>true,"data-parsley-errors-container"=>"#custom-parsley-error{{ field |title }}" ]);  ?>
+                <span id="custom-parsley-error{{ field |title }}"></span>
+            </div>
+                    {{- "\n" }}
+{%- endfor %}
+{% endif %}
+               
+            <br><br><br><br>
+            <div class="pull-right">
+                <?= $this->Html->link(__('<i class="ti-angle-left mr-2"></i> Regresar'), ['action' => 'index'], ['class' => 'btn btn-primary btn-uppercase','escape'=>false],['escape'=>false] ) ?>
+
+                <button type="submit" class="btn btn-success btn-uppercase">
+                    <i class="ti-check-box mr-2"></i> Guardar
+                </button>
+            <div>
+            
+            <?= $this->Form->end() ?>
+</div>

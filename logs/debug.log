@@ -1,0 +1,296 @@
+2023-09-27 19:47:34 notice: Undefined property `ProductsController::$webroot` in `/opt/lampp/htdocs/SitiPagosSoft/src/Controller/ProductsController.php` on line 20
+Request URL: /products
+Client IP: 192.168.1.90
+Trace:
+/opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Controller/Controller.php /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Controller/Controller.php, line 311
+Cake\Controller\Controller->__get() /opt/lampp/htdocs/SitiPagosSoft/src/Controller/ProductsController.php, line 20
+App\Controller\ProductsController->index() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Controller/Controller.php, line 498
+Cake\Controller\Controller->invokeAction() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 139
+Cake\Controller\ControllerFactory->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 114
+Cake\Controller\ControllerFactory->invoke() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/BaseApplication.php, line 332
+Cake\Http\BaseApplication->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 86
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php, line 169
+Cake\Http\Middleware\CsrfProtectionMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php, line 157
+Cake\Http\Middleware\BodyParserMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php, line 118
+Cake\Routing\Middleware\RoutingMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php, line 69
+Cake\Routing\Middleware\AssetMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php, line 115
+Cake\Error\Middleware\ErrorHandlerMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+DebugKit\Middleware\DebugKitMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 67
+Cake\Http\Runner->run() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Server.php, line 103
+Cake\Http\Server->run() /opt/lampp/htdocs/SitiPagosSoft/webroot/index.php, line 37
+[main]
+
+2023-09-27 20:20:47 notice: Undefined property `ProductsController::$webroot` in `/opt/lampp/htdocs/SitiPagosSoft/src/Controller/ProductsController.php` on line 20
+Request URL: /products
+Client IP: 192.168.1.90
+Trace:
+/opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Controller/Controller.php /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Controller/Controller.php, line 311
+Cake\Controller\Controller->__get() /opt/lampp/htdocs/SitiPagosSoft/src/Controller/ProductsController.php, line 20
+App\Controller\ProductsController->index() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Controller/Controller.php, line 498
+Cake\Controller\Controller->invokeAction() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 139
+Cake\Controller\ControllerFactory->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 114
+Cake\Controller\ControllerFactory->invoke() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/BaseApplication.php, line 332
+Cake\Http\BaseApplication->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 86
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php, line 169
+Cake\Http\Middleware\CsrfProtectionMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php, line 157
+Cake\Http\Middleware\BodyParserMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php, line 118
+Cake\Routing\Middleware\RoutingMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php, line 69
+Cake\Routing\Middleware\AssetMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php, line 115
+Cake\Error\Middleware\ErrorHandlerMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+DebugKit\Middleware\DebugKitMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 67
+Cake\Http\Runner->run() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Server.php, line 103
+Cake\Http\Server->run() /opt/lampp/htdocs/SitiPagosSoft/webroot/index.php, line 37
+[main]
+
+2023-10-02 14:28:25 debug: Since 5.0.0: Calling `findList` finder with options array is deprecated. Use named arguments instead.
+/opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/ORM/Table.php, line: 2642
+You can disable all deprecation warnings by setting `Error.errorLevel` to `E_ALL & ~E_USER_DEPRECATED`. Adding `vendor/cakephp/cakephp/src/ORM/Table.php` to `Error.ignoredDeprecationPaths` in your `config/app.php` config will mute deprecations from that file only.
+Request URL: /users/add
+Referer URL: http://localhost/SitiPagosSoft/users
+Trace:
+/opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Core/functions.php /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Core/functions.php, line 325
+/opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/ORM/Table.php /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/ORM/Table.php, line 2700
+Cake\ORM\Table->invokeFinder() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/ORM/Table.php, line 2642
+Cake\ORM\Table->callFinder() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/ORM/Table.php, line 1293
+Cake\ORM\Table->find() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/ORM/Association.php, line 851
+Cake\ORM\Association->find() /opt/lampp/htdocs/SitiPagosSoft/src/Controller/UsersController.php, line 39
+App\Controller\UsersController->add() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Controller/Controller.php, line 498
+Cake\Controller\Controller->invokeAction() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 139
+Cake\Controller\ControllerFactory->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 114
+Cake\Controller\ControllerFactory->invoke() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/BaseApplication.php, line 332
+Cake\Http\BaseApplication->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 86
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php, line 169
+Cake\Http\Middleware\CsrfProtectionMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php, line 87
+Authentication\Middleware\AuthenticationMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php, line 157
+Cake\Http\Middleware\BodyParserMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php, line 118
+Cake\Routing\Middleware\RoutingMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php, line 69
+Cake\Routing\Middleware\AssetMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php, line 115
+Cake\Error\Middleware\ErrorHandlerMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+DebugKit\Middleware\DebugKitMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 67
+Cake\Http\Runner->run() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Server.php, line 103
+Cake\Http\Server->run() /opt/lampp/htdocs/SitiPagosSoft/webroot/index.php, line 37
+[main]
+
+2023-10-02 15:26:29 notice: Undefined property `PaymentsController::$Users` in `/opt/lampp/htdocs/SitiPagosSoft/src/Controller/PaymentsController.php` on line 32
+Request URL: /payments/add
+Referer URL: http://localhost/SitiPagosSoft/payments
+Trace:
+/opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Controller/Controller.php /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Controller/Controller.php, line 311
+Cake\Controller\Controller->__get() /opt/lampp/htdocs/SitiPagosSoft/src/Controller/PaymentsController.php, line 32
+App\Controller\PaymentsController->add() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Controller/Controller.php, line 498
+Cake\Controller\Controller->invokeAction() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 139
+Cake\Controller\ControllerFactory->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 114
+Cake\Controller\ControllerFactory->invoke() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/BaseApplication.php, line 332
+Cake\Http\BaseApplication->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 86
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php, line 169
+Cake\Http\Middleware\CsrfProtectionMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php, line 87
+Authentication\Middleware\AuthenticationMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php, line 157
+Cake\Http\Middleware\BodyParserMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php, line 118
+Cake\Routing\Middleware\RoutingMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php, line 69
+Cake\Routing\Middleware\AssetMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php, line 115
+Cake\Error\Middleware\ErrorHandlerMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+DebugKit\Middleware\DebugKitMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 67
+Cake\Http\Runner->run() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Server.php, line 103
+Cake\Http\Server->run() /opt/lampp/htdocs/SitiPagosSoft/webroot/index.php, line 37
+[main]
+
+2023-10-02 17:31:10 notice: Undefined property `WebServicesController::$Payments` in `/opt/lampp/htdocs/SitiPagosSoft/src/Controller/WebServicesController.php` on line 10
+Request URL: /WebServices
+Trace:
+/opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Controller/Controller.php /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Controller/Controller.php, line 311
+Cake\Controller\Controller->__get() /opt/lampp/htdocs/SitiPagosSoft/src/Controller/WebServicesController.php, line 10
+App\Controller\WebServicesController->index() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Controller/Controller.php, line 498
+Cake\Controller\Controller->invokeAction() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 139
+Cake\Controller\ControllerFactory->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 114
+Cake\Controller\ControllerFactory->invoke() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/BaseApplication.php, line 332
+Cake\Http\BaseApplication->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 86
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php, line 169
+Cake\Http\Middleware\CsrfProtectionMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php, line 87
+Authentication\Middleware\AuthenticationMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php, line 157
+Cake\Http\Middleware\BodyParserMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php, line 118
+Cake\Routing\Middleware\RoutingMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php, line 69
+Cake\Routing\Middleware\AssetMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php, line 115
+Cake\Error\Middleware\ErrorHandlerMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+DebugKit\Middleware\DebugKitMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 67
+Cake\Http\Runner->run() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Server.php, line 103
+Cake\Http\Server->run() /opt/lampp/htdocs/SitiPagosSoft/webroot/index.php, line 37
+[main]
+
+2023-10-02 17:31:11 notice: Undefined property `WebServicesController::$Payments` in `/opt/lampp/htdocs/SitiPagosSoft/src/Controller/WebServicesController.php` on line 10
+Request URL: /WebServices
+Trace:
+/opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Controller/Controller.php /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Controller/Controller.php, line 311
+Cake\Controller\Controller->__get() /opt/lampp/htdocs/SitiPagosSoft/src/Controller/WebServicesController.php, line 10
+App\Controller\WebServicesController->index() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Controller/Controller.php, line 498
+Cake\Controller\Controller->invokeAction() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 139
+Cake\Controller\ControllerFactory->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 114
+Cake\Controller\ControllerFactory->invoke() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/BaseApplication.php, line 332
+Cake\Http\BaseApplication->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 86
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php, line 169
+Cake\Http\Middleware\CsrfProtectionMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php, line 87
+Authentication\Middleware\AuthenticationMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php, line 157
+Cake\Http\Middleware\BodyParserMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php, line 118
+Cake\Routing\Middleware\RoutingMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php, line 69
+Cake\Routing\Middleware\AssetMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php, line 115
+Cake\Error\Middleware\ErrorHandlerMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+DebugKit\Middleware\DebugKitMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 67
+Cake\Http\Runner->run() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Server.php, line 103
+Cake\Http\Server->run() /opt/lampp/htdocs/SitiPagosSoft/webroot/index.php, line 37
+[main]
+
+2023-10-02 17:32:35 notice: Undefined property `WebServicesController::$Payments` in `/opt/lampp/htdocs/SitiPagosSoft/src/Controller/WebServicesController.php` on line 10
+Request URL: /WebServices
+Trace:
+/opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Controller/Controller.php /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Controller/Controller.php, line 311
+Cake\Controller\Controller->__get() /opt/lampp/htdocs/SitiPagosSoft/src/Controller/WebServicesController.php, line 10
+App\Controller\WebServicesController->index() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Controller/Controller.php, line 498
+Cake\Controller\Controller->invokeAction() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 139
+Cake\Controller\ControllerFactory->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 114
+Cake\Controller\ControllerFactory->invoke() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/BaseApplication.php, line 332
+Cake\Http\BaseApplication->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 86
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php, line 169
+Cake\Http\Middleware\CsrfProtectionMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php, line 87
+Authentication\Middleware\AuthenticationMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php, line 157
+Cake\Http\Middleware\BodyParserMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php, line 118
+Cake\Routing\Middleware\RoutingMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php, line 69
+Cake\Routing\Middleware\AssetMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php, line 115
+Cake\Error\Middleware\ErrorHandlerMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+DebugKit\Middleware\DebugKitMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 67
+Cake\Http\Runner->run() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Server.php, line 103
+Cake\Http\Server->run() /opt/lampp/htdocs/SitiPagosSoft/webroot/index.php, line 37
+[main]
+
+2023-10-02 17:34:32 notice: Undefined property `WebServicesController::$Payments` in `/opt/lampp/htdocs/SitiPagosSoft/src/Controller/WebServicesController.php` on line 12
+Request URL: /WebServices
+Trace:
+/opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Controller/Controller.php /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Controller/Controller.php, line 311
+Cake\Controller\Controller->__get() /opt/lampp/htdocs/SitiPagosSoft/src/Controller/WebServicesController.php, line 12
+App\Controller\WebServicesController->index() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Controller/Controller.php, line 498
+Cake\Controller\Controller->invokeAction() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 139
+Cake\Controller\ControllerFactory->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 114
+Cake\Controller\ControllerFactory->invoke() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/BaseApplication.php, line 332
+Cake\Http\BaseApplication->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 86
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php, line 169
+Cake\Http\Middleware\CsrfProtectionMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php, line 87
+Authentication\Middleware\AuthenticationMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php, line 157
+Cake\Http\Middleware\BodyParserMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php, line 118
+Cake\Routing\Middleware\RoutingMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php, line 69
+Cake\Routing\Middleware\AssetMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php, line 115
+Cake\Error\Middleware\ErrorHandlerMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+DebugKit\Middleware\DebugKitMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 67
+Cake\Http\Runner->run() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Server.php, line 103
+Cake\Http\Server->run() /opt/lampp/htdocs/SitiPagosSoft/webroot/index.php, line 37
+[main]
+
+2023-10-02 17:34:34 notice: Undefined property `WebServicesController::$Payments` in `/opt/lampp/htdocs/SitiPagosSoft/src/Controller/WebServicesController.php` on line 12
+Request URL: /WebServices
+Trace:
+/opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Controller/Controller.php /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Controller/Controller.php, line 311
+Cake\Controller\Controller->__get() /opt/lampp/htdocs/SitiPagosSoft/src/Controller/WebServicesController.php, line 12
+App\Controller\WebServicesController->index() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Controller/Controller.php, line 498
+Cake\Controller\Controller->invokeAction() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 139
+Cake\Controller\ControllerFactory->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 114
+Cake\Controller\ControllerFactory->invoke() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/BaseApplication.php, line 332
+Cake\Http\BaseApplication->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 86
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php, line 169
+Cake\Http\Middleware\CsrfProtectionMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php, line 87
+Authentication\Middleware\AuthenticationMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php, line 157
+Cake\Http\Middleware\BodyParserMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php, line 118
+Cake\Routing\Middleware\RoutingMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php, line 69
+Cake\Routing\Middleware\AssetMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php, line 115
+Cake\Error\Middleware\ErrorHandlerMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+DebugKit\Middleware\DebugKitMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 67
+Cake\Http\Runner->run() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Server.php, line 103
+Cake\Http\Server->run() /opt/lampp/htdocs/SitiPagosSoft/webroot/index.php, line 37
+[main]
+
+2023-10-03 13:25:54 notice: Undefined property `PagesController::$Identity` in `/opt/lampp/htdocs/SitiPagosSoft/src/Controller/AppController.php` on line 44
+Request URL: /
+Trace:
+/opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Controller/Controller.php /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Controller/Controller.php, line 311
+Cake\Controller\Controller->__get() /opt/lampp/htdocs/SitiPagosSoft/src/Controller/AppController.php, line 44
+App\Controller\AppController->initialize() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Controller/Controller.php, line 233
+Cake\Controller\Controller->__construct() [internal], line ??
+ReflectionClass->newInstance() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 87
+Cake\Controller\ControllerFactory->create() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/BaseApplication.php, line 330
+Cake\Http\BaseApplication->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 86
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php, line 169
+Cake\Http\Middleware\CsrfProtectionMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php, line 87
+Authentication\Middleware\AuthenticationMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php, line 157
+Cake\Http\Middleware\BodyParserMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php, line 118
+Cake\Routing\Middleware\RoutingMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php, line 69
+Cake\Routing\Middleware\AssetMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php, line 115
+Cake\Error\Middleware\ErrorHandlerMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+DebugKit\Middleware\DebugKitMiddleware->process() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Runner.php, line 67
+Cake\Http\Runner->run() /opt/lampp/htdocs/SitiPagosSoft/vendor/cakephp/cakephp/src/Http/Server.php, line 103
+Cake\Http\Server->run() /opt/lampp/htdocs/SitiPagosSoft/webroot/index.php, line 37
+[main]
+

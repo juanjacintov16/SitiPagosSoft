@@ -1,0 +1,27 @@
+{{ element('Bake.file_header', {
+    namespace: "#{namespace}\\Middleware",
+    classImports: [
+        'Psr\\Http\\Message\\ResponseInterface',
+        'Psr\\Http\\Message\\ServerRequestInterface',
+        'Psr\\Http\\Server\\MiddlewareInterface',
+        'Psr\\Http\\Server\\RequestHandlerInterface',
+    ],
+}) }}
+
+/**
+ * {{ name }} middleware
+ */
+class {{ name }}Middleware implements MiddlewareInterface
+{
+    /**
+     * Process method.
+     *
+     * @param \Psr\Http\Message\ServerRequestInterface $request The request.
+     * @param \Psr\Http\Server\RequestHandlerInterface $handler The request handler.
+     * @return \Psr\Http\Message\ResponseInterface A response.
+     */
+    public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
+    {
+        return $handler->handle($request);
+    }
+}
